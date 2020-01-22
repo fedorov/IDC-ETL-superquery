@@ -1,0 +1,851 @@
+[
+  {
+    "name": "MediaStorageSOPClassUID",
+    "type": "STRING"
+  },
+  {
+    "name": "MediaStorageSOPInstanceUID",
+    "type": "STRING"
+  },
+  {
+    "name": "TransferSyntaxUID",
+    "type": "STRING"
+  },
+  {
+    "name": "ImplementationClassUID",
+    "type": "STRING"
+  },
+  {
+    "name": "ImplementationVersionName",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "SpecificCharacterSet",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "ImageType",
+    "type": "STRING"
+  },
+  {
+    "name": "InstanceCreationDate",
+    "type": "DATE"
+  },
+  {
+    "name": "InstanceCreationTime",
+    "type": "TIME"
+  },
+  {
+    "name": "SOPClassUID",
+    "type": "STRING"
+  },
+  {
+    "name": "SOPInstanceUID",
+    "type": "STRING"
+  },
+  {
+    "name": "StudyDate",
+    "type": "DATE"
+  },
+  {
+    "name": "SeriesDate",
+    "type": "DATE"
+  },
+  {
+    "name": "AcquisitionDate",
+    "type": "DATE"
+  },
+  {
+    "name": "ContentDate",
+    "type": "DATE"
+  },
+  {
+    "name": "StudyTime",
+    "type": "TIME"
+  },
+  {
+    "name": "SeriesTime",
+    "type": "TIME"
+  },
+  {
+    "name": "AcquisitionTime",
+    "type": "TIME"
+  },
+  {
+    "name": "ContentTime",
+    "type": "TIME"
+  },
+  {
+    "name": "AccessionNumber",
+    "type": "STRING"
+  },
+  {
+    "name": "Modality",
+    "type": "STRING"
+  },
+  {
+    "name": "Manufacturer",
+    "type": "STRING"
+  },
+  {
+    "name": "StudyDescription",
+    "type": "STRING"
+  },
+  {
+    "name": "SeriesDescription",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "AdmittingDiagnosesDescription",
+    "type": "STRING"
+  },
+  {
+    "name": "ManufacturerModelName",
+    "type": "STRING"
+  },
+  {
+    "name": "DerivationDescription",
+    "type": "STRING"
+  },
+  {
+    "fields": [
+      {
+        "fields": [
+          {
+            "name": "FamilyName",
+            "type": "STRING"
+          },
+          {
+            "name": "GivenName",
+            "type": "STRING"
+          },
+          {
+            "name": "MiddleName",
+            "type": "STRING"
+          },
+          {
+            "name": "NamePrefix",
+            "type": "STRING"
+          },
+          {
+            "name": "NameSuffix",
+            "type": "STRING"
+          }
+        ],
+        "name": "Alphabetic",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "name": "FamilyName",
+            "type": "STRING"
+          },
+          {
+            "name": "GivenName",
+            "type": "STRING"
+          },
+          {
+            "name": "MiddleName",
+            "type": "STRING"
+          },
+          {
+            "name": "NamePrefix",
+            "type": "STRING"
+          },
+          {
+            "name": "NameSuffix",
+            "type": "STRING"
+          }
+        ],
+        "name": "Ideographic",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "name": "FamilyName",
+            "type": "STRING"
+          },
+          {
+            "name": "GivenName",
+            "type": "STRING"
+          },
+          {
+            "name": "MiddleName",
+            "type": "STRING"
+          },
+          {
+            "name": "NamePrefix",
+            "type": "STRING"
+          },
+          {
+            "name": "NameSuffix",
+            "type": "STRING"
+          }
+        ],
+        "name": "Phonetic",
+        "type": "RECORD"
+      }
+    ],
+    "name": "PatientName",
+    "type": "RECORD"
+  },
+  {
+    "name": "PatientID",
+    "type": "STRING"
+  },
+  {
+    "name": "PatientSex",
+    "type": "STRING"
+  },
+  {
+    "name": "PatientAge",
+    "type": "STRING"
+  },
+  {
+    "name": "PatientWeight",
+    "type": "STRING"
+  },
+  {
+    "name": "EthnicGroup",
+    "type": "STRING"
+  },
+  {
+    "name": "AdditionalPatientHistory",
+    "type": "STRING"
+  },
+  {
+    "name": "PatientIdentityRemoved",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "DeidentificationMethod",
+    "type": "STRING"
+  },
+  {
+    "fields": [
+      {
+        "name": "CodeValue",
+        "type": "STRING"
+      },
+      {
+        "name": "CodingSchemeDesignator",
+        "type": "STRING"
+      },
+      {
+        "name": "CodeMeaning",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "DeidentificationMethodCodeSequence",
+    "type": "RECORD"
+  },
+  {
+    "name": "ContrastBolusAgent",
+    "type": "STRING"
+  },
+  {
+    "name": "BodyPartExamined",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "ScanOptions",
+    "type": "STRING"
+  },
+  {
+    "name": "SliceThickness",
+    "type": "STRING"
+  },
+  {
+    "name": "KVP",
+    "type": "STRING"
+  },
+  {
+    "name": "SpacingBetweenSlices",
+    "type": "STRING"
+  },
+  {
+    "name": "DataCollectionDiameter",
+    "type": "STRING"
+  },
+  {
+    "name": "DeviceSerialNumber",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "SoftwareVersions",
+    "type": "STRING"
+  },
+  {
+    "name": "ProtocolName",
+    "type": "STRING"
+  },
+  {
+    "name": "ContrastBolusRoute",
+    "type": "STRING"
+  },
+  {
+    "name": "ReconstructionDiameter",
+    "type": "STRING"
+  },
+  {
+    "name": "DistanceSourceToDetector",
+    "type": "STRING"
+  },
+  {
+    "name": "DistanceSourceToPatient",
+    "type": "STRING"
+  },
+  {
+    "name": "GantryDetectorTilt",
+    "type": "STRING"
+  },
+  {
+    "name": "TableHeight",
+    "type": "STRING"
+  },
+  {
+    "name": "RotationDirection",
+    "type": "STRING"
+  },
+  {
+    "name": "AngularPosition",
+    "type": "STRING"
+  },
+  {
+    "name": "ScanArc",
+    "type": "STRING"
+  },
+  {
+    "name": "ExposureTime",
+    "type": "STRING"
+  },
+  {
+    "name": "XRayTubeCurrent",
+    "type": "STRING"
+  },
+  {
+    "name": "Exposure",
+    "type": "STRING"
+  },
+  {
+    "name": "FilterType",
+    "type": "STRING"
+  },
+  {
+    "name": "GeneratorPower",
+    "type": "STRING"
+  },
+  {
+    "name": "CollimatorType",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "FocalSpots",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "DateOfLastCalibration",
+    "type": "DATE"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "TimeOfLastCalibration",
+    "type": "TIME"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "ConvolutionKernel",
+    "type": "STRING"
+  },
+  {
+    "name": "ActualFrameDuration",
+    "type": "STRING"
+  },
+  {
+    "name": "PatientPosition",
+    "type": "STRING"
+  },
+  {
+    "name": "RevolutionTime",
+    "type": "FLOAT"
+  },
+  {
+    "name": "SingleCollimationWidth",
+    "type": "FLOAT"
+  },
+  {
+    "name": "TotalCollimationWidth",
+    "type": "FLOAT"
+  },
+  {
+    "name": "TableSpeed",
+    "type": "FLOAT"
+  },
+  {
+    "name": "TableFeedPerRotation",
+    "type": "FLOAT"
+  },
+  {
+    "name": "SpiralPitchFactor",
+    "type": "FLOAT"
+  },
+  {
+    "fields": [
+      {
+        "name": "EstimatedDoseSaving",
+        "type": "FLOAT"
+      },
+      {
+        "name": "ExposureTimeInms",
+        "type": "FLOAT"
+      },
+      {
+        "name": "XRayTubeCurrentInmA",
+        "type": "FLOAT"
+      },
+      {
+        "name": "ExposureInmAs",
+        "type": "FLOAT"
+      },
+      {
+        "name": "CTDIvol",
+        "type": "FLOAT"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "CTExposureSequence",
+    "type": "RECORD"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "ExposureModulationType",
+    "type": "STRING"
+  },
+  {
+    "name": "CTDIvol",
+    "type": "FLOAT"
+  },
+  {
+    "name": "StudyInstanceUID",
+    "type": "STRING"
+  },
+  {
+    "name": "SeriesInstanceUID",
+    "type": "STRING"
+  },
+  {
+    "name": "SeriesNumber",
+    "type": "STRING"
+  },
+  {
+    "name": "AcquisitionNumber",
+    "type": "STRING"
+  },
+  {
+    "name": "InstanceNumber",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "ImagePositionPatient",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "ImageOrientationPatient",
+    "type": "STRING"
+  },
+  {
+    "name": "FrameOfReferenceUID",
+    "type": "STRING"
+  },
+  {
+    "name": "PositionReferenceIndicator",
+    "type": "STRING"
+  },
+  {
+    "name": "SliceLocation",
+    "type": "STRING"
+  },
+  {
+    "name": "ImageComments",
+    "type": "STRING"
+  },
+  {
+    "name": "SamplesPerPixel",
+    "type": "INTEGER"
+  },
+  {
+    "name": "PhotometricInterpretation",
+    "type": "STRING"
+  },
+  {
+    "name": "Rows",
+    "type": "INTEGER"
+  },
+  {
+    "name": "Columns",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "PixelSpacing",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "CorrectedImage",
+    "type": "STRING"
+  },
+  {
+    "name": "BitsAllocated",
+    "type": "INTEGER"
+  },
+  {
+    "name": "BitsStored",
+    "type": "INTEGER"
+  },
+  {
+    "name": "HighBit",
+    "type": "INTEGER"
+  },
+  {
+    "name": "PixelRepresentation",
+    "type": "INTEGER"
+  },
+  {
+    "name": "SmallestImagePixelValue",
+    "type": "INTEGER"
+  },
+  {
+    "name": "LargestImagePixelValue",
+    "type": "INTEGER"
+  },
+  {
+    "name": "PixelPaddingValue",
+    "type": "INTEGER"
+  },
+  {
+    "name": "LongitudinalTemporalInformationModified",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "WindowCenter",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "WindowWidth",
+    "type": "STRING"
+  },
+  {
+    "name": "RescaleIntercept",
+    "type": "STRING"
+  },
+  {
+    "name": "RescaleSlope",
+    "type": "STRING"
+  },
+  {
+    "name": "RescaleType",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "WindowCenterWidthExplanation",
+    "type": "STRING"
+  },
+  {
+    "name": "LossyImageCompression",
+    "type": "STRING"
+  },
+  {
+    "name": "StudyStatusID",
+    "type": "STRING"
+  },
+  {
+    "name": "StudyPriorityID",
+    "type": "STRING"
+  },
+  {
+    "name": "ReasonForStudy",
+    "type": "STRING"
+  },
+  {
+    "name": "RequestedProcedureDescription",
+    "type": "STRING"
+  },
+  {
+    "name": "StudyComments",
+    "type": "STRING"
+  },
+  {
+    "name": "PerformedProcedureStepStartDate",
+    "type": "DATE"
+  },
+  {
+    "name": "PerformedProcedureStepStartTime",
+    "type": "TIME"
+  },
+  {
+    "name": "PerformedProcedureStepDescription",
+    "type": "STRING"
+  },
+  {
+    "fields": [
+      {
+        "name": "EnergyWindowLowerLimit",
+        "type": "STRING"
+      },
+      {
+        "name": "EnergyWindowUpperLimit",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "EnergyWindowRangeSequence",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "name": "RadiopharmaceuticalStartTime",
+        "type": "TIME"
+      },
+      {
+        "name": "RadionuclideTotalDose",
+        "type": "STRING"
+      },
+      {
+        "name": "RadionuclideHalfLife",
+        "type": "STRING"
+      },
+      {
+        "name": "RadionuclidePositronFraction",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "name": "MappingResource",
+            "type": "STRING"
+          },
+          {
+            "name": "ContextGroupVersion",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "ContextIdentifier",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RadionuclideCodeSequence",
+        "type": "RECORD"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "RadiopharmaceuticalInformationSequence",
+    "type": "RECORD"
+  },
+  {
+    "name": "NumberOfSlices",
+    "type": "INTEGER"
+  },
+  {
+    "fields": [
+      {
+        "name": "CodeValue",
+        "type": "STRING"
+      },
+      {
+        "name": "CodingSchemeDesignator",
+        "type": "STRING"
+      },
+      {
+        "name": "CodeMeaning",
+        "type": "STRING"
+      },
+      {
+        "name": "MappingResource",
+        "type": "STRING"
+      },
+      {
+        "name": "ContextGroupVersion",
+        "type": "TIMESTAMP"
+      },
+      {
+        "name": "ContextIdentifier",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "name": "MappingResource",
+            "type": "STRING"
+          },
+          {
+            "name": "ContextGroupVersion",
+            "type": "TIMESTAMP"
+          },
+          {
+            "name": "ContextIdentifier",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PatientOrientationModifierCodeSequence",
+        "type": "RECORD"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "PatientOrientationCodeSequence",
+    "type": "RECORD"
+  },
+  {
+    "fields": [
+      {
+        "name": "CodeValue",
+        "type": "STRING"
+      },
+      {
+        "name": "CodingSchemeDesignator",
+        "type": "STRING"
+      },
+      {
+        "name": "CodeMeaning",
+        "type": "STRING"
+      },
+      {
+        "name": "MappingResource",
+        "type": "STRING"
+      },
+      {
+        "name": "ContextGroupVersion",
+        "type": "TIMESTAMP"
+      },
+      {
+        "name": "ContextIdentifier",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "PatientGantryRelationshipCodeSequence",
+    "type": "RECORD"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "SeriesType",
+    "type": "STRING"
+  },
+  {
+    "name": "Units",
+    "type": "STRING"
+  },
+  {
+    "name": "CountsSource",
+    "type": "STRING"
+  },
+  {
+    "name": "RandomsCorrectionMethod",
+    "type": "STRING"
+  },
+  {
+    "name": "AttenuationCorrectionMethod",
+    "type": "STRING"
+  },
+  {
+    "name": "DecayCorrection",
+    "type": "STRING"
+  },
+  {
+    "name": "ReconstructionMethod",
+    "type": "STRING"
+  },
+  {
+    "name": "ScatterCorrectionMethod",
+    "type": "STRING"
+  },
+  {
+    "name": "AxialAcceptance",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "AxialMash",
+    "type": "STRING"
+  },
+  {
+    "name": "FrameReferenceTime",
+    "type": "STRING"
+  },
+  {
+    "name": "DecayFactor",
+    "type": "STRING"
+  },
+  {
+    "name": "DoseCalibrationFactor",
+    "type": "STRING"
+  },
+  {
+    "name": "ScatterFractionFactor",
+    "type": "STRING"
+  },
+  {
+    "name": "ImageIndex",
+    "type": "INTEGER"
+  },
+  {
+    "fields": [
+      {
+        "mode": "REQUIRED",
+        "name": "Tag",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "Data",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "OtherElements",
+    "type": "RECORD"
+  }
+]
