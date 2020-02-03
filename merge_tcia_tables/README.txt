@@ -9,7 +9,7 @@ Workflow
 
 3. From visual inspection I determined 14 columns with the same names but different structures across the tcga tables. These are recorded in the 'columns w different structures' sheet in the same spreadsheet file.
 
-4. get_tcga_schema_json.x retrieved the 21 tcga table schemas in json format and placed them in the schema directory
+4. get_tcga_schema_json.x retrieved the 21 tcga table schemas in json format and placed them in the schemas directory
 
 5. mergeschemas.py then merges all these schemas into one schema that defines the dicom_all table. The 'skip_columns.txt' file is used to list certain columns that are not included in the merged schema. This includes the 14 columns that have different structures across the collections and the Rows column. At the time I thought Rows was a bigquery artifact and not a Dicom attribute but I may have been mistaken
 
