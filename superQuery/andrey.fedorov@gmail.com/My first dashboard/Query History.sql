@@ -1,48 +1,120 @@
 WITH
-  contentSequenceLevel1 AS (
+  measurementGroups AS (
   WITH
-    structuredReports AS (
+    contentSequenceLevel1 AS (
+    WITH
+      structuredReports AS (
+      SELECT
+        *
+      FROM
+        `idc-dev-etl.pre_mvp_temp.dicom_all`
+      WHERE
+        (SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.11"
+          OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.22"
+          OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.33"
+          OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.34"
+          OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.35")
+        AND ARRAY_LENGTH(ContentTemplateSequence) <> 0
+        AND ContentTemplateSequence[
+      OFFSET
+        (0)].TemplateIdentifier = "1500"
+        AND ContentTemplateSequence[
+      OFFSET
+        (0)].MappingResource = "DCMR")
     SELECT
-      *
+      PatientID,
+      SOPInstanceUID,
+      SeriesDescription,
+      contentSequence
     FROM
-      `idc-dev-etl.pre_mvp_temp.dicom_all`
-    WHERE
-      (SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.11"
-        OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.22"
-        OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.33"
-        OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.34"
-        OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.35")
-      AND ARRAY_LENGTH(ContentTemplateSequence) <> 0
-      AND ContentTemplateSequence[
-    OFFSET
-      (0)].TemplateIdentifier = "1500"
-      AND ContentTemplateSequence[
-    OFFSET
-      (0)].MappingResource = "DCMR")
+      structuredReports
+    CROSS JOIN
+      UNNEST(ContentSequence) AS contentSequence )
   SELECT
     PatientID,
     SOPInstanceUID,
     SeriesDescription,
-    contentSequence
+    contentSequence,
+    measurementGroup_number
   FROM
-    structuredReports
+    contentSequenceLevel1
   CROSS JOIN
-    UNNEST(ContentSequence) AS contentSequence )
+    UNNEST (contentSequence.ContentSequence) AS contentSequence
+  WITH
+  OFFSET
+    AS measurementGroup_number
+  WHERE
+    contentSequence.ValueType = "CONTAINER"
+    AND contentSequence.ConceptNameCodeSequence[
+  OFFSET
+    (0)].CodeMeaning = "Measurement Group"),
+  measurementGroups_withTrackingID AS (
+  SELECT
+    SOPInstanceUID,
+    measurementGroup_number,
+    unnestedContentSequence.TextValue AS trackingIdentifier
+  FROM
+    measurementGroups
+  CROSS JOIN
+    UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+  WHERE
+    unnestedContentSequence.ValueType = "TEXT"
+    AND (unnestedContentSequence.ConceptNameCodeSequence[
+    OFFSET
+      (0)].CodeValue = "112039"
+      AND unnestedContentSequence.ConceptNameCodeSequence[
+    OFFSET
+      (0)].CodingSchemeDesignator = "DCM")),
+  measurementGroups_withTrackingUID AS (
+  SELECT
+    SOPInstanceUID,
+    measurementGroup_number,
+    unnestedContentSequence.UID AS trackingUniqueIdentifier
+  FROM
+    measurementGroups
+  CROSS JOIN
+    UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+  WHERE
+    unnestedContentSequence.ValueType = "UIDREF"
+    AND (unnestedContentSequence.ConceptNameCodeSequence[
+    OFFSET
+      (0)].CodeValue = "112040"
+      AND unnestedContentSequence.ConceptNameCodeSequence[
+    OFFSET
+      (0)].CodingSchemeDesignator = "DCM")),
+  measurementGroups_withFinding AS (
+  SELECT
+    SOPInstanceUID,
+    measurementGroup_number,
+    unnestedContentSequence.ConceptCodeSequence[OFFSET(0)] as finding
+  FROM
+    measurementGroups
+  CROSS JOIN
+    UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+  WHERE
+    unnestedContentSequence.ValueType = "CODE"
+    AND (unnestedContentSequence.ConceptNameCodeSequence[
+    OFFSET
+      (0)].CodeValue = "121071"
+      AND unnestedContentSequence.ConceptNameCodeSequence[
+    OFFSET
+      (0)].CodingSchemeDesignator = "DCM"))
 SELECT
-  PatientID,
-  SOPInstanceUID,
-  SeriesDescription,
-  contentSequence,
-  measurementGroup_number
+  mWithUID.SOPInstanceUID,
+  mWithUID.measurementGroup_number,
+  mWithUID.trackingUniqueIdentifier,
+  mWithID.trackingIdentifier,
+  mWithFinding.finding
 FROM
-  contentSequenceLevel1
-CROSS JOIN
-  UNNEST (contentSequence.ContentSequence) AS contentSequence
-WITH
-OFFSET
-  AS measurementGroup_number
-WHERE
-  contentSequence.ValueType = "CONTAINER"
-  AND contentSequence.ConceptNameCodeSequence[
-OFFSET
-  (0)].CodeMeaning = "Measurement Group"
+  measurementGroups_withTrackingUID AS mWithUID
+JOIN
+  measurementGroups_withTrackingID AS mWithID
+ON
+  mWithID.SOPInstanceUID = mWithUID.SOPInstanceUID
+  AND mWithID.measurementGroup_number = mWithUID.measurementGroup_number
+  #  unnest (measurementGroups.ContentSequence)
+JOIN
+  measurementGroups_withFinding AS mWithFinding  
+ON
+  mWithID.SOPInstanceUID = mWithFinding.SOPInstanceUID
+  AND mWithID.measurementGroup_number = mWithFinding.measurementGroup_number
