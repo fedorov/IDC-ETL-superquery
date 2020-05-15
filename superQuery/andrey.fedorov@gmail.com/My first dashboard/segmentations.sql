@@ -24,9 +24,17 @@ SELECT
   CASE
     ARRAY_LENGTH(unnested.AnatomicRegionSequence)
     WHEN 0 THEN NULL
-    ELSE unnested.AnatomicRegionSequence [
+    ELSE STRUCT(
+      unnested.AnatomicRegionSequence [
   OFFSET
-    (0)]
+    (0)].CodeValue AS CodeValue,
+      unnested.AnatomicRegionSequence [
+  OFFSET
+    (0)].CodingSchemeDesignator AS CodingSchemeDesignator,
+      unnested.AnatomicRegionSequence [
+  OFFSET
+    (0)].CodeMeaning AS CodeMeaning
+    )
   END AS AnatomicRegion,
   CASE
     (
