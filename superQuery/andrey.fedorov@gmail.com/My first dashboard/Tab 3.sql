@@ -44,14 +44,13 @@ contentSequenceLevel3codes AS (
         contentSequence.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodingSchemeDesignator AS CodingSchemeDesignator,
         contentSequence.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodeMeaning AS CodeMeaning
       )
-    
-    ELSE NULL
-END AS derivationModifier,
-FROM
-  `idc-dev-etl.pre_mvp_temp.measurement_groups`
-  CROSS JOIN UNNEST (contentSequence.ContentSequence) AS contentSequence
-WHERE
-  contentSequence.ValueType = "CODE"
+      ELSE NULL
+    END AS derivationModifier
+  FROM
+    `idc-dev-etl.pre_mvp_temp.measurement_groups`
+    CROSS JOIN UNNEST (contentSequence.ContentSequence) AS contentSequence
+  WHERE
+    contentSequence.ValueType = "CODE"
 ),
 ---
 contentSequenceLevel3uidrefs AS (
@@ -91,6 +90,7 @@ findingSites AS (
     PatientID,
     SOPInstanceUID,
     ConceptCodeSequence AS findingSite,
+    derivationModifier AS derivationModifier,
     measurementGroup_number
   FROM
     contentSequenceLevel3codes
@@ -105,7 +105,8 @@ findingsAndFindingSites AS (
     findings.SOPInstanceUID,
     findings.finding,
     findingSites.findingSite,
-    findingSites.measurementGroup_number
+    findingSites.measurementGroup_number,
+    findingSites.derivationModifier
   FROM
     findings
     JOIN findingSites ON findings.SOPInstanceUID = findingSites.SOPInstanceUID
@@ -124,6 +125,7 @@ SELECT
   contentSequenceLevel3numeric.PatientID,
   contentSequenceLevel3numeric.SOPInstanceUID,
   contentSequenceLevel3numeric.ConceptNameCodeSequence AS Quantity,
+  findingsAndFindingSites.derivationModifier AS derivationModifier,
   SAFE_CAST(
     contentSequenceLevel3numeric.MeasuredValueSequence.NumericValue [
     OFFSET
