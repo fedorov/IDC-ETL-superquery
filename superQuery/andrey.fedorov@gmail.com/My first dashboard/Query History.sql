@@ -83,6 +83,19 @@ measurementGroups_withTrackingUID AS (
       (0)].CodingSchemeDesignator = "DCM"
     )
 ),
+measurementGroups_withSegmentation AS (
+  SELECT
+    SOPInstanceUID,
+    measurementGroup_number,
+    unnestedContentSequence.ReferencedSOPSequence[OFFSET(0)].ReferencedSOPInstanceUID AS segmentationInstanceUID,
+    unnestedContentSequence.ReferencedSOPSequence[OFFSET(0)].ReferencedSegmentNumber AS segmentationSegmentNumber
+  FROM
+    measurementGroups
+    CROSS JOIN UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+  WHERE
+    unnestedContentSequence.ValueType = "IMAGE"
+    AND unnestedContentSequence.ReferencedSOPSequence[OFFSET(0)].ReferencedSOPClassUID = "1.2.840.10008.5.1.4.1.1.66.4"
+),
 measurementGroups_withSourceSeries AS (
   SELECT
     SOPInstanceUID,
@@ -147,14 +160,18 @@ SELECT
   mWithID.trackingIdentifier,
   mWithFinding.finding,
   mWithFindingSite.findingSite,
-  mWithSourceSeries.sourceSegmentedSeriesUID
+  mWithSourceSeries.sourceSegmentedSeriesUID,
+  mWithSegmentation.segmentationInstanceUID,
+  mWithSegmentation.segmentationSegmentNumber
 FROM
   measurementGroups_withTrackingUID AS mWithUID
   LEFT JOIN measurementGroups_withTrackingID AS mWithID ON mWithID.SOPInstanceUID = mWithUID.SOPInstanceUID
-  AND mWithID.measurementGroup_number = mWithUID.measurementGroup_number #  unnest (measurementGroups.ContentSequence)
+  AND mWithID.measurementGroup_number = mWithUID.measurementGroup_number
   LEFT JOIN measurementGroups_withFinding AS mWithFinding ON mWithID.SOPInstanceUID = mWithFinding.SOPInstanceUID
   AND mWithID.measurementGroup_number = mWithFinding.measurementGroup_number
   LEFT JOIN measurementGroups_withFindingSite AS mWithFindingSite ON mWithID.SOPInstanceUID = mWithFindingSite.SOPInstanceUID
   AND mWithID.measurementGroup_number = mWithFindingSite.measurementGroup_number
   LEFT JOIN measurementGroups_withSourceSeries AS mWithSourceSeries ON mWithID.SOPInstanceUID = mWithSourceSeries.SOPInstanceUID
   AND mWithID.measurementGroup_number = mWithSourceSeries.measurementGroup_number
+  LEFT JOIN measurementGroups_withSegmentation AS mWithSegmentation ON mWithID.SOPInstanceUID = mWithSegmentation.SOPInstanceUID
+  AND mWithID.measurementGroup_number = mWithSegmentation.measurementGroup_number
