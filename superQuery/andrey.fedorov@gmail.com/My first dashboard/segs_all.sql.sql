@@ -18,9 +18,8 @@
      unnested.SegmentedPropertyCategoryCodeSequence,
      unnested.SegmentedPropertyTypeCodeSequence,
      unnested.SegmentAlgorithmType,
-     unnested.SegmentNumber,
-    unnested.TrackingUID,
-    unnested.TrackingID
+     unnested.SegmentNumber
+     #,   unnested.TrackingUID,    unnested.TrackingID
   FROM
     segs
   CROSS JOIN
