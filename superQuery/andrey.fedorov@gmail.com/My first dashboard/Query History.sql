@@ -1,1 +1,1 @@
-SELECT * FROM `idc-dev-etl._2cd210a6be3633fb17e3843d299e2f5309f5d9cf.anona41d7724916d83e9abb23adef4d2a2382223039f`  ORDER BY value asc
+SELECT * FROM `idc-dev-etl._2cd210a6be3633fb17e3843d299e2f5309f5d9cf.anona41d7724916d83e9abb23adef4d2a2382223039f`  ORDER BY key asc
