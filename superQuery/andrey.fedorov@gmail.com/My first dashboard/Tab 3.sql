@@ -14,6 +14,7 @@ contentSequenceLevel3numeric AS (
     (0)].MeasurementUnitsCodeSequence [
   OFFSET
     (0)] AS MeasurementUnits,
+    contentSequence.ContentSequence,
     measurementGroup_number
   FROM
     `idc-dev-etl.pre_mvp_temp.measurement_groups`
@@ -32,20 +33,7 @@ contentSequenceLevel3codes AS (
     contentSequence.ConceptCodeSequence [
   OFFSET
     (0)] AS ConceptCodeSequence,
-    measurementGroup_number,
-    CASE
-      (
-        ARRAY_LENGTH(contentSequence.ContentSequence) > 0
-        AND contentSequence.ContentSequence [OFFSET(0)].ConceptNameCodeSequence [OFFSET(0)].CodeValue = "121401"
-        AND contentSequence.ContentSequence [OFFSET(0)].ConceptNameCodeSequence [OFFSET(0)].CodingSchemeDesignator = "DCM"
-      )
-      WHEN TRUE THEN STRUCT(
-        contentSequence.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodeValue AS CodeValue,
-        contentSequence.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodingSchemeDesignator AS CodingSchemeDesignator,
-        contentSequence.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodeMeaning AS CodeMeaning
-      )
-      ELSE NULL
-    END AS derivationModifier
+    measurementGroup_number
   FROM
     `idc-dev-etl.pre_mvp_temp.measurement_groups`
     CROSS JOIN UNNEST (contentSequence.ContentSequence) AS contentSequence
@@ -90,7 +78,6 @@ findingSites AS (
     PatientID,
     SOPInstanceUID,
     ConceptCodeSequence AS findingSite,
-    derivationModifier AS derivationModifier,
     measurementGroup_number
   FROM
     contentSequenceLevel3codes
@@ -105,8 +92,7 @@ findingsAndFindingSites AS (
     findings.SOPInstanceUID,
     findings.finding,
     findingSites.findingSite,
-    findingSites.measurementGroup_number,
-    findingSites.derivationModifier
+    findingSites.measurementGroup_number
   FROM
     findings
     JOIN findingSites ON findings.SOPInstanceUID = findingSites.SOPInstanceUID
@@ -125,7 +111,19 @@ SELECT
   contentSequenceLevel3numeric.PatientID,
   contentSequenceLevel3numeric.SOPInstanceUID,
   contentSequenceLevel3numeric.ConceptNameCodeSequence AS Quantity,
-  findingsAndFindingSites.derivationModifier AS derivationModifier,
+      CASE
+      (
+        ARRAY_LENGTH(contentSequenceLevel3numeric.ContentSequence) > 0
+        AND contentSequenceLevel3numeric.ContentSequence [OFFSET(0)].ConceptNameCodeSequence [OFFSET(0)].CodeValue = "121401"
+        AND contentSequenceLevel3numeric.ContentSequence [OFFSET(0)].ConceptNameCodeSequence [OFFSET(0)].CodingSchemeDesignator = "DCM"
+      )
+      WHEN TRUE THEN STRUCT(
+        contentSequenceLevel3numeric.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodeValue AS CodeValue,
+        contentSequenceLevel3numeric.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodingSchemeDesignator AS CodingSchemeDesignator,
+        contentSequenceLevel3numeric.ContentSequence [OFFSET(0)].ConceptCodeSequence [OFFSET(0)].CodeMeaning AS CodeMeaning
+      )
+      ELSE NULL
+    END AS derivationModifier,
   SAFE_CAST(
     contentSequenceLevel3numeric.MeasuredValueSequence.NumericValue [
     OFFSET
