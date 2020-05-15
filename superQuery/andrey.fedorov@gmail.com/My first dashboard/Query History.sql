@@ -1,26 +1,26 @@
-WITH
-  measurementGroups AS (
-  WITH
-    contentSequenceLevel1 AS (
-    WITH
-      structuredReports AS (
+WITH measurementGroups AS (
+  WITH contentSequenceLevel1 AS (
+    WITH structuredReports AS (
       SELECT
         *
       FROM
         `idc-dev-etl.pre_mvp_temp.dicom_all`
       WHERE
-        (SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.11"
+        (
+          SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.11"
           OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.22"
           OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.33"
           OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.34"
-          OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.35")
+          OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.35"
+        )
         AND ARRAY_LENGTH(ContentTemplateSequence) <> 0
-        AND ContentTemplateSequence[
+        AND ContentTemplateSequence [
       OFFSET
         (0)].TemplateIdentifier = "1500"
-        AND ContentTemplateSequence[
+        AND ContentTemplateSequence [
       OFFSET
-        (0)].MappingResource = "DCMR")
+        (0)].MappingResource = "DCMR"
+    )
     SELECT
       PatientID,
       SOPInstanceUID,
@@ -28,8 +28,8 @@ WITH
       contentSequence
     FROM
       structuredReports
-    CROSS JOIN
-      UNNEST(ContentSequence) AS contentSequence )
+      CROSS JOIN UNNEST(ContentSequence) AS contentSequence
+  )
   SELECT
     PatientID,
     SOPInstanceUID,
@@ -38,83 +38,101 @@ WITH
     measurementGroup_number
   FROM
     contentSequenceLevel1
-  CROSS JOIN
-    UNNEST (contentSequence.ContentSequence) AS contentSequence
-  WITH
-  OFFSET
-    AS measurementGroup_number
+    CROSS JOIN UNNEST (contentSequence.ContentSequence) AS contentSequence WITH OFFSET AS measurementGroup_number
   WHERE
     contentSequence.ValueType = "CONTAINER"
-    AND contentSequence.ConceptNameCodeSequence[
+    AND contentSequence.ConceptNameCodeSequence [
   OFFSET
-    (0)].CodeMeaning = "Measurement Group"),
-  measurementGroups_withTrackingID AS (
+    (0)].CodeMeaning = "Measurement Group"
+),
+measurementGroups_withTrackingID AS (
   SELECT
     SOPInstanceUID,
     measurementGroup_number,
     unnestedContentSequence.TextValue AS trackingIdentifier
   FROM
     measurementGroups
-  CROSS JOIN
-    UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+    CROSS JOIN UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
   WHERE
     unnestedContentSequence.ValueType = "TEXT"
-    AND (unnestedContentSequence.ConceptNameCodeSequence[
+    AND (
+      unnestedContentSequence.ConceptNameCodeSequence [
     OFFSET
       (0)].CodeValue = "112039"
-      AND unnestedContentSequence.ConceptNameCodeSequence[
+      AND unnestedContentSequence.ConceptNameCodeSequence [
     OFFSET
-      (0)].CodingSchemeDesignator = "DCM")),
-  measurementGroups_withTrackingUID AS (
+      (0)].CodingSchemeDesignator = "DCM"
+    )
+),
+measurementGroups_withTrackingUID AS (
   SELECT
     SOPInstanceUID,
     measurementGroup_number,
     unnestedContentSequence.UID AS trackingUniqueIdentifier
   FROM
     measurementGroups
-  CROSS JOIN
-    UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+    CROSS JOIN UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
   WHERE
     unnestedContentSequence.ValueType = "UIDREF"
-    AND (unnestedContentSequence.ConceptNameCodeSequence[
+    AND (
+      unnestedContentSequence.ConceptNameCodeSequence [
     OFFSET
       (0)].CodeValue = "112040"
-      AND unnestedContentSequence.ConceptNameCodeSequence[
+      AND unnestedContentSequence.ConceptNameCodeSequence [
     OFFSET
-      (0)].CodingSchemeDesignator = "DCM")),
-  measurementGroups_withFinding AS (
+      (0)].CodingSchemeDesignator = "DCM"
+    )
+),
+measurementGroups_withFinding AS (
   SELECT
     SOPInstanceUID,
     measurementGroup_number,
-    unnestedContentSequence.ConceptCodeSequence[OFFSET(0)] as finding
+    unnestedContentSequence.ConceptCodeSequence [OFFSET(0)] as finding
   FROM
     measurementGroups
-  CROSS JOIN
-    UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+    CROSS JOIN UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
   WHERE
     unnestedContentSequence.ValueType = "CODE"
-    AND (unnestedContentSequence.ConceptNameCodeSequence[
+    AND (
+      unnestedContentSequence.ConceptNameCodeSequence [
     OFFSET
       (0)].CodeValue = "121071"
-      AND unnestedContentSequence.ConceptNameCodeSequence[
+      AND unnestedContentSequence.ConceptNameCodeSequence [
     OFFSET
-      (0)].CodingSchemeDesignator = "DCM"))
+      (0)].CodingSchemeDesignator = "DCM"
+    )
+),
+measurementGroups_withFindingSite AS (
+  SELECT
+    SOPInstanceUID,
+    measurementGroup_number,
+    unnestedContentSequence.ConceptCodeSequence [OFFSET(0)] as findingSite
+  FROM
+    measurementGroups
+    CROSS JOIN UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+  WHERE
+    unnestedContentSequence.ValueType = "CODE"
+    AND (
+      unnestedContentSequence.ConceptNameCodeSequence [
+    OFFSET
+      (0)].CodeValue = "G-C0E3"
+      AND unnestedContentSequence.ConceptNameCodeSequence [
+    OFFSET
+      (0)].CodingSchemeDesignator = "SRT"
+    )
+)
 SELECT
   mWithUID.SOPInstanceUID,
   mWithUID.measurementGroup_number,
   mWithUID.trackingUniqueIdentifier,
   mWithID.trackingIdentifier,
-  mWithFinding.finding
+  mWithFinding.finding,
+  mWithFindingSite.findingSite
 FROM
   measurementGroups_withTrackingUID AS mWithUID
-JOIN
-  measurementGroups_withTrackingID AS mWithID
-ON
-  mWithID.SOPInstanceUID = mWithUID.SOPInstanceUID
-  AND mWithID.measurementGroup_number = mWithUID.measurementGroup_number
-  #  unnest (measurementGroups.ContentSequence)
-JOIN
-  measurementGroups_withFinding AS mWithFinding  
-ON
-  mWithID.SOPInstanceUID = mWithFinding.SOPInstanceUID
+  JOIN measurementGroups_withTrackingID AS mWithID ON mWithID.SOPInstanceUID = mWithUID.SOPInstanceUID
+  AND mWithID.measurementGroup_number = mWithUID.measurementGroup_number #  unnest (measurementGroups.ContentSequence)
+  JOIN measurementGroups_withFinding AS mWithFinding ON mWithID.SOPInstanceUID = mWithFinding.SOPInstanceUID
   AND mWithID.measurementGroup_number = mWithFinding.measurementGroup_number
+  JOIN measurementGroups_withFindingSite AS mWithFindingSite ON mWithID.SOPInstanceUID = mWithFindingSite.SOPInstanceUID
+  AND mWithID.measurementGroup_number = mWithFindingSite.measurementGroup_number
