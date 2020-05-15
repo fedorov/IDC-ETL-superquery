@@ -83,6 +83,25 @@ measurementGroups_withTrackingUID AS (
       (0)].CodingSchemeDesignator = "DCM"
     )
 ),
+measurementGroups_withSourceSeries AS (
+  SELECT
+    SOPInstanceUID,
+    measurementGroup_number,
+    unnestedContentSequence.UID AS sourceSegmentedSeriesUID
+  FROM
+    measurementGroups
+    CROSS JOIN UNNEST(contentSequence.ContentSequence) AS unnestedContentSequence
+  WHERE
+    unnestedContentSequence.ValueType = "UIDREF"
+    AND (
+      unnestedContentSequence.ConceptNameCodeSequence [
+    OFFSET
+      (0)].CodeValue = "121232"
+      AND unnestedContentSequence.ConceptNameCodeSequence [
+    OFFSET
+      (0)].CodingSchemeDesignator = "DCM"
+    )
+),
 measurementGroups_withFinding AS (
   SELECT
     SOPInstanceUID,
@@ -127,7 +146,8 @@ SELECT
   mWithUID.trackingUniqueIdentifier,
   mWithID.trackingIdentifier,
   mWithFinding.finding,
-  mWithFindingSite.findingSite
+  mWithFindingSite.findingSite,
+  mWithSourceSeries.sourceSegmentedSeriesUID
 FROM
   measurementGroups_withTrackingUID AS mWithUID
   JOIN measurementGroups_withTrackingID AS mWithID ON mWithID.SOPInstanceUID = mWithUID.SOPInstanceUID
@@ -136,3 +156,5 @@ FROM
   AND mWithID.measurementGroup_number = mWithFinding.measurementGroup_number
   JOIN measurementGroups_withFindingSite AS mWithFindingSite ON mWithID.SOPInstanceUID = mWithFindingSite.SOPInstanceUID
   AND mWithID.measurementGroup_number = mWithFindingSite.measurementGroup_number
+  JOIN measurementGroups_withSourceSeries AS mWithSourceSeries ON mWithID.SOPInstanceUID = mWithSourceSeries.SOPInstanceUID
+  AND mWithID.measurementGroup_number = mWithSourceSeries.measurementGroup_number
