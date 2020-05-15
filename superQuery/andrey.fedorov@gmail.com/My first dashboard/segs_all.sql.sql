@@ -8,7 +8,7 @@
       #`idc-tcia.lidc_idri_seg_sr.lidc_idri_seg_sr`
     WHERE
       # more reliable than Modality = "SEG"
-      SOPClassUID = "1.2.840.10008.5.1.4.1.1.66.4" AND LENGTH(SegmentSequence)) <> 0)
+      SOPClassUID = "1.2.840.10008.5.1.4.1.1.66.4" AND ARRAY_LENGTH(SegmentSequence) <> 0)
   SELECT
     PatientID,
     SOPInstanceUID,
