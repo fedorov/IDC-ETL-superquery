@@ -13,14 +13,14 @@
     PatientID,
     SOPInstanceUID,
     FrameOfReferenceUID
-    -- ,
-    -- unnested.AnatomicRegionSequence,
-    -- unnested.SegmentedPropertyCategoryCodeSequence,
-    -- unnested.SegmentedPropertyTypeCodeSequence,
-    -- unnested.SegmentAlgorithmType,
-    -- unnested.SegmentNumber,
-    #unnested.TrackingUID,
-    #unnested.TrackingID
+     ,
+     unnested.AnatomicRegionSequence,
+     unnested.SegmentedPropertyCategoryCodeSequence,
+     unnested.SegmentedPropertyTypeCodeSequence,
+     unnested.SegmentAlgorithmType,
+     unnested.SegmentNumber,
+    unnested.TrackingUID,
+    unnested.TrackingID
   FROM
     segs
   CROSS JOIN
