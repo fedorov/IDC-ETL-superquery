@@ -10,7 +10,7 @@ DICOM metadata extraction process in Google Healthcare.
 These views were confirmed to be functional (although, no comprehensive verification
 of accuracy has been done) when run against the metadata extracted for the following
 "original" TCIA collections and also analysis results ("3rd party") corresponding to
-those collections:
+those collections (a.k.a. IDC "wave0" of content):
 
 TCGA-UCEC, TCGA-SARC, TCGA-THCA, TCGA-STAD, TCGA-READ, TCGA-LIHC, TCGA-LGG, TCGA-HNSC, TCGA-ESCA, TCGA-COAD, TCGA-CESC, TCGA-BRCA, LIDC-IDRI, ISPY1, TCGA-PRAD, TCGA-OV, TCGA-LUSC, TCGA-KIRP, TCGA-LUAD, TCGA-KIRC, TCGA-KICH, TCGA-GBM, TCGA-BLCA, QIN-HEADNECK
 
