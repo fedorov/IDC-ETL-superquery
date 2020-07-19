@@ -51,8 +51,8 @@ def create_dataset(target_client, target_project_id, dataset_id, dataset_dict):
     full_dataset_id = "{}.{}".format(target_project_id, dataset_id)
     install_dataset = bigquery.Dataset(full_dataset_id)
 
-    install_dataset.location = dataset_dict.location
-    install_dataset.description = dataset_dict.description
+    install_dataset.location = "US"
+    install_dataset.description = dataset_dict["description"]
     install_dataset.labels = dataset_dict["labels"]
 
     target_client.create_dataset(install_dataset)
@@ -254,12 +254,13 @@ def main(args):
                 print("creating view: {}".format(view_name))
                 sql_format_file = view_dict["sql"]
                 metadata_file = view_dict["metadata"]
-                table_list = view_dict["metadata"]
-                metadata_file_full_path = "{}/{}".format(data_file_path, sql_format_file)
-                sql_format_file_full_path = "{}/{}".format(data_file_path, metadata_file)
+                table_list = view_dict["table_list"]
+                metadata_file_full_path = "{}/{}".format(data_file_path, metadata_file)
+                sql_format_file_full_path = "{}/{}".format(data_file_path, sql_format_file)
                 with open(sql_format_file_full_path, mode='r') as sql_format_file:
                     sql_format = sql_format_file.read()
                 # use list as argument to format:
+                print(table_list)
                 view_sql = sql_format.format(*table_list)
                 with open(metadata_file_full_path, mode='r') as view_metadata_file:
                     view_schema = json_loads(view_metadata_file.read())
