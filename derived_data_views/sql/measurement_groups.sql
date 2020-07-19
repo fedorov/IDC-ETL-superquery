@@ -10,7 +10,7 @@ WITH
         SeriesDescription,
         ContentSequence
       FROM
-        `idc-dev-etl.pre_mvp_temp.dicom_all`
+        `{0}`
       WHERE
         ( SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.11"
           OR SOPClassUID = "1.2.840.10008.5.1.4.1.1.88.22"

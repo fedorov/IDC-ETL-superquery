@@ -12,8 +12,7 @@ WITH
     FrameOfReferenceUID,
     SegmentSequence
   FROM
-    `canceridc-data.idc_tcia.idc_tcia_dicom_metadata_mvp_wave0` # Debug:
-    #`idc-tcia.lidc_idri_seg_sr.lidc_idri_seg_sr`
+    `{0}`
   WHERE
     # more reliable than Modality = "SEG"
     SOPClassUID = "1.2.840.10008.5.1.4.1.1.66.4" )

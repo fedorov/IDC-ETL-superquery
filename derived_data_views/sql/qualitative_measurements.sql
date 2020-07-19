@@ -16,7 +16,7 @@ WITH
   OFFSET
     (0)] AS ConceptCodeSequence
   FROM
-    `idc-dev-etl.canceridc_data.measurement_groups`
+    `{0}`
   CROSS JOIN
     UNNEST (contentSequence.ContentSequence) AS contentSequence
   WHERE

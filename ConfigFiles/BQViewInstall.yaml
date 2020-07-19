@@ -1,0 +1,39 @@
+# Used for publish_bq_views.sh
+
+version: 1
+files_and_buckets_and_tables:
+
+  # What is the installation project:
+  TARGET_PROJECT: your-installation-project
+
+  # What is the installation dataset:
+  DATASET: your_nstallation_dataset
+
+  # Relative file path to data files, from working directory
+  DATA_FILE_PATH: your/path/to/data # no leading or trailing /
+
+  # Where is the dataset description file:
+  DATASET_METADATA_FILE: JSON_file_describing_view
+
+  # For each view to install, what is the sql, json file with the schema and metadata, and table list for sql
+  INSTALL_LIST:
+    - first_view_name:
+       sql: path/to/view/query.sql # no leading /
+       metadata: path/to/view/metadata.json # no leading /
+       table_list:
+         - project.dataset.first_table_name_in_sql_statement
+    -  second_view_name:
+       sql: path/to/view/query.sql # no leading /
+       metadata: path/to/view/metadata.json # no leading /
+       table_list:
+         - project.dataset.first_table_name_in_sql_statement
+         - project.dataset.second_table_name_in_sql_statement
+         - project.dataset.third_table_name_in_sql_statement
+
+steps:
+  # delete existing dataset, if present:
+  - delete_existing_dataset
+  # Create the target dataset:
+  - create_dataset
+  # Install the views:
+  - install_views

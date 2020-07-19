@@ -23,7 +23,7 @@ WITH
     (0)] AS MeasurementUnits,
     contentSequence.ContentSequence
   FROM
-    `idc-dev-etl.canceridc_data.measurement_groups`
+    `{0}`
   CROSS JOIN
     UNNEST (contentSequence.ContentSequence) AS contentSequence
   WHERE
@@ -46,7 +46,7 @@ WITH
   SAFE_OFFSET
     (0)] AS ConceptCodeSequence
   FROM
-    `idc-dev-etl.pre_mvp_temp.measurement_groups`
+    `{1}`
   CROSS JOIN
     UNNEST (contentSequence.ContentSequence) AS contentSequence
   WHERE
@@ -62,7 +62,7 @@ WITH
     (0)] AS ConceptCodeSequence,
     measurementGroup_number
   FROM
-    `idc-dev-etl.pre_mvp_temp.measurement_groups`
+    `{2}`
   CROSS JOIN
     UNNEST (contentSequence.ContentSequence) AS contentSequence
   WHERE
