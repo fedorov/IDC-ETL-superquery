@@ -52,7 +52,7 @@ def create_dataset(target_client, target_project_id, dataset_id, dataset_dict):
     install_dataset = bigquery.Dataset(full_dataset_id)
 
     install_dataset.location = "US"
-    install_dataset.description = dataset_dict.description
+    install_dataset.description = dataset_dict["description"]
     install_dataset.labels = dataset_dict["labels"]
 
     target_client.create_dataset(install_dataset)
