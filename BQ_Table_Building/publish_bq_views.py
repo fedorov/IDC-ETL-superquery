@@ -254,7 +254,7 @@ def main(args):
                 print("creating view: {}".format(view_name))
                 sql_format_file = view_dict["sql"]
                 metadata_file = view_dict["metadata"]
-                table_list = view_dict["metadata"]
+                table_list = view_dict["table_list"]
                 metadata_file_full_path = "{}/{}".format(data_file_path, sql_format_file)
                 sql_format_file_full_path = "{}/{}".format(data_file_path, metadata_file)
                 with open(sql_format_file_full_path, mode='r') as sql_format_file:
