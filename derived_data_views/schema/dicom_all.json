@@ -1,0 +1,6800 @@
+{
+  "description": "TBD Description",
+  "friendlyName": "TBD Friendly Name",
+  "labels": {
+    "tbd_key_1": "value_1",
+    "tbd_key_2": "value_2"
+  },
+  "schema": {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "collection_id",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "MediaStorageSOPClassUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "MediaStorageSOPInstanceUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TransferSyntaxUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImplementationClassUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImplementationVersionName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SourceApplicationEntityTitle",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ReferencedFileID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LengthToEnd",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SpecificCharacterSet",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ImageType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RecognitionCode",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InstanceCreationDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InstanceCreationTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InstanceCreatorUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SOPClassUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SOPInstanceUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SeriesDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContentDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "OverlayDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CurveDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionDateTime",
+        "type": "TIMESTAMP"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SeriesTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContentTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DataSetType",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DataSetSubtype",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AccessionNumber",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "RetrieveAETitle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Modality",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ModalitiesInStudy",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ConversionType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PresentationIntentType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Manufacturer",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CodingSchemeDesignator",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeName",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "CodingSchemeIdentificationSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StationName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyDescription",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextGroupExtensionFlag",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ProcedureCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SeriesDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "AdmittingDiagnosesDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ManufacturerModelName",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedStudySequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "InstanceCreationDate",
+            "type": "DATE"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstanceCreationTime",
+            "type": "TIME"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstanceCreatorUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPInstanceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstanceNumber",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedPerformedProcedureStepSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPClassUID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPInstanceUID",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ReferencedInstanceSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SeriesInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedSeriesSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REPEATED",
+            "name": "SpecificCharacterSet",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SOPInstanceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedImageSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReferencedSOPInstanceUID",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPClassUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPInstanceUID",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ReferencedInstanceSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SeriesInstanceUID",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ReferencedSeriesSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "StudyInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "StudiesContainingOtherReferencedInstancesSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "StudyInstanceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SeriesInstanceUID",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MappingResource",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextGroupVersion",
+                "type": "TIMESTAMP"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextIdentifier",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PurposeOfReferenceCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RelatedSeriesSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DerivationDescription",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPInstanceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SpatialLocationsPreserved",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PurposeOfReferenceCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "SourceImageSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "AnatomicRegionSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "IrradiationEventUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FrameType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CreatorVersionUID",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "MappingResource",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextGroupVersion",
+            "type": "TIMESTAMP"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextGroupExtensionFlag",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextIdentifier",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "DerivationCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Alphabetic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Ideographic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Phonetic",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "PatientName",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientSex",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientAge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientSize",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientWeight",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "MedicalAlerts",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "Allergies",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EthnicGroup",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Occupation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SmokingStatus",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AdditionalPatientHistory",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PregnancyStatus",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LastMenstrualDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientComments",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialSponsorName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialProtocolID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialProtocolName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialSiteID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialSubjectID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialSubjectReadingID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialTimePointID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialTimePointDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialCoordinatingCenterName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientIdentityRemoved",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DeidentificationMethod",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "DeidentificationMethodCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ClinicalTrialSeriesID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusAgent",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BodyPartExamined",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ScanningSequence",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SequenceVariant",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ScanOptions",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "MRAcquisitionType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SequenceName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AngioFlag",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Radiopharmaceutical",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SliceThickness",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "KVP",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CountsAccumulated",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionTerminationCondition",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionStartCondition",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionStartConditionData",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionTerminationConditionData",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RepetitionTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EchoTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InversionTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfAverages",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImagingFrequency",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImagedNucleus",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "EchoNumbers",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "MagneticFieldStrength",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SpacingBetweenSlices",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfPhaseEncodingSteps",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DataCollectionDiameter",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EchoTrainLength",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PercentSampling",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PercentPhaseFieldOfView",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelBandwidth",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DeviceSerialNumber",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PlateID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GantryID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SecondaryCaptureDeviceID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DateOfSecondaryCapture",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TimeOfSecondaryCapture",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SecondaryCaptureDeviceManufacturer",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SecondaryCaptureDeviceManufacturerModelName",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SecondaryCaptureDeviceSoftwareVersions",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SoftwareVersions",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "VideoImageFormatAcquired",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DigitalImageFormatAcquired",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ProtocolName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusRoute",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusVolume",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusStartTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusStopTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusTotalDose",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ContrastFlowRate",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ContrastFlowDuration",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusIngredient",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContrastBolusIngredientConcentration",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SpatialResolution",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TriggerTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TriggerSourceOrType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NominalInterval",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FrameTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RadiopharmaceuticalVolume",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RadiopharmaceuticalStartTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BeatRejectionFlag",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LowRRValue",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "HighRRValue",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "IntervalsAcquired",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "IntervalsRejected",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SkipBeats",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "HeartRate",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CardiacNumberOfImages",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TriggerWindow",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReconstructionDiameter",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DistanceSourceToDetector",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DistanceSourceToPatient",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EstimatedRadiographicMagnificationFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GantryDetectorTilt",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GantryDetectorSlew",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TableHeight",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TableTraverse",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RotationDirection",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AngularPosition",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScanArc",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FieldOfViewShape",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FieldOfViewDimensions",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ExposureTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "XRayTubeCurrent",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Exposure",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ExposureInuAs",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageAndFluoroscopyAreaDoseProduct",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FilterType",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ImagerPixelSpacing",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "Grid",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GeneratorPower",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CollimatorGridName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CollimatorType",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "XFocusCenter",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "YFocusCenter",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FocalSpots",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AnodeTargetMaterial",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BodyPartThickness",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CompressionForce",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DateOfLastCalibration",
+        "type": "DATE"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "TimeOfLastCalibration",
+        "type": "TIME"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ConvolutionKernel",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ActualFrameDuration",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CountRate",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReceiveCoilName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TransmitCoilName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PlateType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScanLength",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "AcquisitionMatrix",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InPlanePhaseEncodingDirection",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FlipAngle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "VariableFlipAngleFlag",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SAR",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "dBdt",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionDeviceProcessingDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionDeviceProcessingCode",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CassetteOrientation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CassetteSize",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RelativeXRayExposure",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TomoLayerHeight",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TomoAngle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TomoTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TomoType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TomoClass",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfTomosynthesisSourceImages",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PositionerType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PositionerPrimaryAngle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PositionerSecondaryAngle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorSecondaryAngle",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ShutterShape",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ShutterLeftVerticalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ShutterRightVerticalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ShutterUpperHorizontalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ShutterLowerHorizontalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RadiusOfCircularShutter",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "CollimatorShape",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CollimatorLeftVerticalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CollimatorRightVerticalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CollimatorUpperHorizontalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CollimatorLowerHorizontalEdge",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "VerticesOfThePolygonalCollimator",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionComments",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ProcessingFunction",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PostprocessingFunction",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientPosition",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ViewPosition",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Sensitivity",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReferencePixelX0",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReferencePixelY0",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorConditionsNominalFlag",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorTemperature",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorConfiguration",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DateOfLastDetectorCalibration",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TimeOfLastDetectorCalibration",
+        "type": "TIME"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DetectorBinning",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DetectorElementPhysicalSize",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DetectorElementSpacing",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorActiveShape",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DetectorActiveDimensions",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FieldOfViewOrigin",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FieldOfViewRotation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FieldOfViewHorizontalFlip",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GridFocalDistance",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FilterMaterial",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FilterThicknessMinimum",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FilterThicknessMaximum",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ExposureControlMode",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ExposureControlModeDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ExposureStatus",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContentQualification",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SaturationRecovery",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GeometryOfKSpaceTraversal",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RectilinearPhaseEncodeReordering",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionDuration",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DiffusionBValue",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DiffusionGradientOrientation",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfKSpaceTrajectories",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RevolutionTime",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SingleCollimationWidth",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TotalCollimationWidth",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TableSpeed",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TableFeedPerRotation",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SpiralPitchFactor",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DataCollectionCenterPatient",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ReconstructionTargetCenterPatient",
+        "type": "FLOAT"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REPEATED",
+            "name": "ExposureModulationType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "EstimatedDoseSaving",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ExposureTimeInms",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "XRayTubeCurrentInmA",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ExposureInmAs",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CTDIvol",
+            "type": "FLOAT"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "CTExposureSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ExposureModulationType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EstimatedDoseSaving",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CTDIvol",
+        "type": "FLOAT"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "CTDIPhantomTypeCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "CalciumScoringMassFactorDevice",
+        "type": "FLOAT"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Manufacturer",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstitutionName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstitutionAddress",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "StationName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstitutionalDepartmentName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ManufacturerModelName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "DeviceSerialNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "SoftwareVersions",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PurposeOfReferenceCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ContributingEquipmentSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyInstanceUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SeriesInstanceUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SeriesNumber",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionNumber",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InstanceNumber",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ItemNumber",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "PatientOrientation",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ImagePosition",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ImagePositionPatient",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ImageOrientation",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ImageOrientationPatient",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Location",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FrameOfReferenceUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Laterality",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageLaterality",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageGeometryType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TemporalPositionIdentifier",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfTemporalPositions",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TemporalResolution",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AcquisitionsInSeries",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImagesInAcquisition",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PositionReferenceIndicator",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SliceLocation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfStudyRelatedSeries",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfStudyRelatedInstances",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfSeriesRelatedInstances",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageComments",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "OriginalImageIdentification",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "OriginalImageIdentificationNomenclature",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StackID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InStackPositionNumber",
+        "type": "INTEGER"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "DimensionOrganizationUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "DimensionOrganizationSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "DimensionOrganizationUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "DimensionIndexPointer",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "FunctionalGroupPointer",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "DimensionDescriptionLabel",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "DimensionIndexSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DimensionOrganizationType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SamplesPerPixel",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PhotometricInterpretation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageDimensions",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PlanarConfiguration",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfFrames",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "FrameIncrementPointer",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Rows",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Columns",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Planes",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "PixelSpacing",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ZoomFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ZoomCenter",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "PixelAspectRatio",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageFormat",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ManipulatedImage",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "CorrectedImage",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CompressionCode",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BitsAllocated",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BitsStored",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "HighBit",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelRepresentation",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SmallestValidPixelValue",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LargestValidPixelValue",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SmallestImagePixelValue",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LargestImagePixelValue",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SmallestPixelValueInSeries",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LargestPixelValueInSeries",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelPaddingValue",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelPaddingRangeLimit",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageLocation",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "QualityControlImage",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BurnedInAnnotation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LongitudinalTemporalInformationModified",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelSpacingCalibrationDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelIntensityRelationship",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PixelIntensityRelationshipSign",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "WindowCenter",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "WindowWidth",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RescaleIntercept",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RescaleSlope",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RescaleType",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "WindowCenterWidthExplanation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "VOILUTFunction",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "RedPaletteColorLookupTableDescriptor",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "GreenPaletteColorLookupTableDescriptor",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "BluePaletteColorLookupTableDescriptor",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PaletteColorLookupTableUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BreastImplantPresent",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "LossyImageCompression",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "LossyImageCompressionRatio",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "LossyImageCompressionMethod",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REPEATED",
+            "name": "LUTDescriptor",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "LUTExplanation",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "VOILUTSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyStatusID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyPriorityID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyReadDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyReadTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledStudyStartDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledStudyStartTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledStudyLocation",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ScheduledStudyLocationAETitle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReasonForStudy",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyArrivalDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyArrivalTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyCompletionDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyCompletionTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RequestedProcedureDescription",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RequestedProcedureCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RequestedContrastAgent",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StudyComments",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RouteOfAdmissions",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AdmittingDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AdmittingTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DischargeTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SpecialNeeds",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PatientState",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledProcedureStepStartDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledProcedureStepStartTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledProcedureStepEndDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledProcedureStepEndTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledProcedureStepDescription",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ScheduledProtocolCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScheduledProcedureStepID",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "ScheduledStationName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedStationAETitle",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedStationName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedProcedureStepStartDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedProcedureStepStartTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedProcedureStepEndDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedProcedureStepEndTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PerformedProcedureStepDescription",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextGroupExtensionFlag",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PerformedProtocolCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "AccessionNumber",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPClassUID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPInstanceUID",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ReferencedStudySequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "StudyInstanceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RequestedProcedureDescription",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "RequestedProcedureCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ScheduledProcedureStepDescription",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ScheduledProtocolCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ScheduledProcedureStepID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RequestedProcedureID",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RequestAttributesSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CommentsOnThePerformedProcedureStep",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TotalNumberOfExposures",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EntranceDose",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DistanceSourceToEntrance",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "AcquisitionDateTime",
+            "type": "TIMESTAMP"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SeriesDescription",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "KVP",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ExposureTime",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "Exposure",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiationMode",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "FilterType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ScanLength",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "FilterMaterial",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "XRayTubeCurrentInuA",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "AcquisitionType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SingleCollimationWidth",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TotalCollimationWidth",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SpiralPitchFactor",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "EstimatedDoseSaving",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CTDIvol",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SeriesNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SliceLocation",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ExposureDoseSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CommentsOnRadiationDose",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "HalfValueLayer",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "OrganDose",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "OrganExposed",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ConceptNameCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ConceptCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "AcquisitionContextSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReasonForTheRequestedProcedure",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RequestedProcedurePriority",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RequestedProcedureComments",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReasonForTheImagingServiceRequest",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImagingServiceRequestComments",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "EntranceDoseInmGy",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPClassUID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPInstanceUID",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ReferencedImageSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "LUTExplanation",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "MeasurementUnitsCodeSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "LUTLabel",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "RealWorldValueLastValueMapped",
+                "type": "INTEGER"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "RealWorldValueFirstValueMapped",
+                "type": "INTEGER"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ValueType",
+                    "type": "STRING"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ConceptNameCodeSequence",
+                    "type": "RECORD"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ConceptCodeSequence",
+                    "type": "RECORD"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "QuantityDefinitionSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "RealWorldValueIntercept",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "RealWorldValueSlope",
+                "type": "FLOAT"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "RealWorldValueMappingSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedImageRealWorldValueMappingSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "LUTExplanation",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeVersion",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "MeasurementUnitsCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "LUTLabel",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RealWorldValueLastValueMapped",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RealWorldValueFirstValueMapped",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RealWorldValueIntercept",
+            "type": "FLOAT"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RealWorldValueSlope",
+            "type": "FLOAT"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RealWorldValueMappingSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ValueType",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ConceptNameCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContinuityOfContent",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "VerifyingOrganization",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "VerificationDateTime",
+            "type": "TIMESTAMP"
+          },
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "FamilyName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "GivenName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MiddleName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NamePrefix",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NameSuffix",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "NULLABLE",
+                "name": "Alphabetic",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "FamilyName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "GivenName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MiddleName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NamePrefix",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NameSuffix",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "NULLABLE",
+                "name": "Ideographic",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "FamilyName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "GivenName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MiddleName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NamePrefix",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NameSuffix",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "NULLABLE",
+                "name": "Phonetic",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "VerifyingObserverName",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "VerifyingObserverSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Alphabetic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Ideographic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Phonetic",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "VerifyingObserverName",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DateTime",
+        "type": "TIMESTAMP"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Alphabetic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Ideographic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Phonetic",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "PersonName",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "UID",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPClassUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPInstanceUID",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ReferencedSOPSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SeriesInstanceUID",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ReferencedSeriesSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "StudyInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "CurrentRequestedProcedureEvidenceSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CompletionFlag",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "VerificationFlag",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "MappingResource",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "MappingResourceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TemplateIdentifier",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ContentTemplateSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "RelationshipType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ValueType",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ConceptNameCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContinuityOfContent",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "FamilyName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "GivenName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MiddleName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NamePrefix",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NameSuffix",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "NULLABLE",
+                "name": "Alphabetic",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "FamilyName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "GivenName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MiddleName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NamePrefix",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NameSuffix",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "NULLABLE",
+                "name": "Ideographic",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "FamilyName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "GivenName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MiddleName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NamePrefix",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "NameSuffix",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "NULLABLE",
+                "name": "Phonetic",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "PersonName",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "UID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TextValue",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ConceptCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "MeasurementUnitsCodeSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "NumericValue",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "MeasuredValueSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "MappingResource",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MappingResourceUID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "TemplateIdentifier",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ContentTemplateSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "RelationshipType",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ValueType",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ConceptNameCodeSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContinuityOfContent",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "Date",
+                "type": "DATE"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ConceptCodeSequence",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "MeasurementUnitsCodeSequence",
+                    "type": "RECORD"
+                  },
+                  {
+                    "mode": "REPEATED",
+                    "name": "NumericValue",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "MeasuredValueSequence",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MappingResource",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MappingResourceUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "TemplateIdentifier",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ContentTemplateSequence",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "ReferencedSOPClassUID",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "ReferencedSOPInstanceUID",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "REPEATED",
+                        "name": "ReferencedSegmentNumber",
+                        "type": "INTEGER"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ReferencedSOPSequence",
+                    "type": "RECORD"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "RelationshipType",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ValueType",
+                    "type": "STRING"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ConceptNameCodeSequence",
+                    "type": "RECORD"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ContinuityOfContent",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "Date",
+                    "type": "DATE"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "Time",
+                    "type": "TIME"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "UID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "TextValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeVersion",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ConceptCodeSequence",
+                    "type": "RECORD"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "fields": [
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodeValue",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodingSchemeDesignator",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodeMeaning",
+                            "type": "STRING"
+                          }
+                        ],
+                        "mode": "REPEATED",
+                        "name": "MeasurementUnitsCodeSequence",
+                        "type": "RECORD"
+                      },
+                      {
+                        "mode": "REPEATED",
+                        "name": "NumericValue",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "MeasuredValueSequence",
+                    "type": "RECORD"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "RelationshipType",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "ValueType",
+                        "type": "STRING"
+                      },
+                      {
+                        "fields": [
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodeValue",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodingSchemeDesignator",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodeMeaning",
+                            "type": "STRING"
+                          }
+                        ],
+                        "mode": "REPEATED",
+                        "name": "ConceptNameCodeSequence",
+                        "type": "RECORD"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "ContinuityOfContent",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "Time",
+                        "type": "TIME"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "TextValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "fields": [
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodeValue",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodingSchemeDesignator",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "CodeMeaning",
+                            "type": "STRING"
+                          }
+                        ],
+                        "mode": "REPEATED",
+                        "name": "ConceptCodeSequence",
+                        "type": "RECORD"
+                      },
+                      {
+                        "fields": [
+                          {
+                            "fields": [
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodeValue",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodingSchemeDesignator",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodeMeaning",
+                                "type": "STRING"
+                              }
+                            ],
+                            "mode": "REPEATED",
+                            "name": "MeasurementUnitsCodeSequence",
+                            "type": "RECORD"
+                          },
+                          {
+                            "mode": "REPEATED",
+                            "name": "NumericValue",
+                            "type": "STRING"
+                          }
+                        ],
+                        "mode": "REPEATED",
+                        "name": "MeasuredValueSequence",
+                        "type": "RECORD"
+                      },
+                      {
+                        "fields": [
+                          {
+                            "mode": "NULLABLE",
+                            "name": "RelationshipType",
+                            "type": "STRING"
+                          },
+                          {
+                            "mode": "NULLABLE",
+                            "name": "ValueType",
+                            "type": "STRING"
+                          },
+                          {
+                            "fields": [
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodeValue",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodingSchemeDesignator",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodeMeaning",
+                                "type": "STRING"
+                              }
+                            ],
+                            "mode": "REPEATED",
+                            "name": "ConceptNameCodeSequence",
+                            "type": "RECORD"
+                          },
+                          {
+                            "fields": [
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodeValue",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodingSchemeDesignator",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "CodeMeaning",
+                                "type": "STRING"
+                              }
+                            ],
+                            "mode": "REPEATED",
+                            "name": "ConceptCodeSequence",
+                            "type": "RECORD"
+                          },
+                          {
+                            "fields": [
+                              {
+                                "mode": "NULLABLE",
+                                "name": "RelationshipType",
+                                "type": "STRING"
+                              },
+                              {
+                                "mode": "NULLABLE",
+                                "name": "ValueType",
+                                "type": "STRING"
+                              },
+                              {
+                                "fields": [
+                                  {
+                                    "mode": "NULLABLE",
+                                    "name": "CodeValue",
+                                    "type": "STRING"
+                                  },
+                                  {
+                                    "mode": "NULLABLE",
+                                    "name": "CodingSchemeDesignator",
+                                    "type": "STRING"
+                                  },
+                                  {
+                                    "mode": "NULLABLE",
+                                    "name": "CodeMeaning",
+                                    "type": "STRING"
+                                  }
+                                ],
+                                "mode": "REPEATED",
+                                "name": "ConceptNameCodeSequence",
+                                "type": "RECORD"
+                              },
+                              {
+                                "fields": [
+                                  {
+                                    "mode": "NULLABLE",
+                                    "name": "CodeValue",
+                                    "type": "STRING"
+                                  },
+                                  {
+                                    "mode": "NULLABLE",
+                                    "name": "CodingSchemeDesignator",
+                                    "type": "STRING"
+                                  },
+                                  {
+                                    "mode": "NULLABLE",
+                                    "name": "CodeMeaning",
+                                    "type": "STRING"
+                                  }
+                                ],
+                                "mode": "REPEATED",
+                                "name": "ConceptCodeSequence",
+                                "type": "RECORD"
+                              }
+                            ],
+                            "mode": "REPEATED",
+                            "name": "ContentSequence",
+                            "type": "RECORD"
+                          }
+                        ],
+                        "mode": "REPEATED",
+                        "name": "ContentSequence",
+                        "type": "RECORD"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ContentSequence",
+                    "type": "RECORD"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ContentSequence",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ContentSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ContentSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CalibrationImage",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "EnergyWindowVector",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfEnergyWindows",
+        "type": "INTEGER"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "EnergyWindowLowerLimit",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "EnergyWindowUpperLimit",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "EnergyWindowRangeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "EnergyWindowName",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "EnergyWindowInformationSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "EnergyWindowLowerLimit",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "EnergyWindowUpperLimit",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "EnergyWindowRangeSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Radiopharmaceutical",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiopharmaceuticalVolume",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiopharmaceuticalStartTime",
+            "type": "TIME"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiopharmaceuticalStopTime",
+            "type": "TIME"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadionuclideTotalDose",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadionuclideHalfLife",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadionuclidePositronFraction",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiopharmaceuticalStartDateTime",
+            "type": "TIMESTAMP"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiopharmaceuticalStopDateTime",
+            "type": "TIMESTAMP"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MappingResource",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextGroupVersion",
+                "type": "TIMESTAMP"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextIdentifier",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "RadionuclideCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeVersion",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MappingResource",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextGroupVersion",
+                "type": "TIMESTAMP"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextIdentifier",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "RadiopharmaceuticalCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RadiopharmaceuticalInformationSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "DetectorVector",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfDetectors",
+        "type": "INTEGER"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "GantryDetectorTilt",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "RadialPosition",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CenterOfRotationOffset",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "FieldOfViewShape",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "FieldOfViewDimensions",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CollimatorGridName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CollimatorType",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "FocalDistance",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "XFocusCenter",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "YFocusCenter",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "ImagePositionPatient",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "ImageOrientationPatient",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "ZoomFactor",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "ZoomCenter",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "StartAngle",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ViewCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "DetectorInformationSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "PhaseVector",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfPhases",
+        "type": "INTEGER"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ActualFrameDuration",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfFramesInPhase",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "PhaseDelay",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "PauseBetweenFrames",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PhaseInformationSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfRotations",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfRRIntervals",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfTimeSlots",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfSlices",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "TimeSliceVector",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "NumberOfTimeSlices",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TypeOfDetectorMotion",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ViewModifierCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ViewCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageID",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "MappingResource",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextGroupVersion",
+            "type": "TIMESTAMP"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextIdentifier",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MappingResource",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextGroupVersion",
+                "type": "TIMESTAMP"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContextIdentifier",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PatientOrientationModifierCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PatientOrientationCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PatientOrientationModifierCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "MappingResource",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextGroupVersion",
+            "type": "TIMESTAMP"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ContextIdentifier",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PatientGantryRelationshipCodeSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SeriesType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Units",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CountsSource",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReprojectionMethod",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RandomsCorrectionMethod",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AttenuationCorrectionMethod",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DecayCorrection",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ReconstructionMethod",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DetectorLinesOfResponseUsed",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScatterCorrectionMethod",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AxialAcceptance",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "AxialMash",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TransverseMash",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "CoincidenceWindowWidth",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SecondaryCountsType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FrameReferenceTime",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PrimaryPromptsCountsAccumulated",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "SecondaryCountsAccumulated",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SliceSensitivityFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DecayFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DoseCalibrationFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ScatterFractionFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DeadTimeFactor",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageIndex",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SegmentationType",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "AnatomicRegionModifierSequence",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "AnatomicRegionSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "SegmentedPropertyCategoryCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SegmentNumber",
+            "type": "INTEGER"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SegmentLabel",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SegmentDescription",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SegmentAlgorithmType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SegmentAlgorithmName",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "RecommendedDisplayCIELabValue",
+            "type": "INTEGER"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "SegmentedPropertyTypeCodeSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TrackingID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TrackingUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "SegmentSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "MaximumFractionalValue",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SegmentationFractionalType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContentLabel",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ContentDescription",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Alphabetic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Ideographic",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "FamilyName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GivenName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "MiddleName",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NamePrefix",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NameSuffix",
+                "type": "STRING"
+              }
+            ],
+            "mode": "NULLABLE",
+            "name": "Phonetic",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "ContentCreatorName",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RelativeOpacity",
+        "type": "FLOAT"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StorageMediaFileSetUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ImageDisplayFormat",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "AnnotationDisplayFormatID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FilmOrientation",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BorderDensity",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "Trim",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "PresentationLUTShape",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DoseUnits",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DoseType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DoseSummationType",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "GridFrameOffsetVector",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "DoseGridScaling",
+        "type": "STRING"
+      },
+      {
+        "mode": "REPEATED",
+        "name": "TissueHeterogeneityCorrection",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StructureSetLabel",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StructureSetName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StructureSetDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "StructureSetTime",
+        "type": "TIME"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "FrameOfReferenceUID",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPClassUID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedSOPInstanceUID",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "SeriesInstanceUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "ReferencedSOPClassUID",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "ReferencedSOPInstanceUID",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "ContourImageSequence",
+                    "type": "RECORD"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "RTReferencedSeriesSequence",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "RTReferencedStudySequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedFrameOfReferenceSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ROINumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedFrameOfReferenceUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ROIName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ROIVolume",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ROIGenerationAlgorithm",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "StructureSetROISequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "REPEATED",
+            "name": "ROIDisplayColor",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPClassUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPInstanceUID",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "ContourImageSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ContourGeometricType",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NumberOfContourPoints",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "ContourData",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ContourSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedROINumber",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ROIContourSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ObservationNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedROINumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RTROIInterpretedType",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ROIPhysicalProperty",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ROIPhysicalPropertyValue",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ROIPhysicalPropertiesSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "RTROIObservationsSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RTPlanLabel",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RTPlanName",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RTPlanDescription",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RTPlanDate",
+        "type": "DATE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RTPlanTime",
+        "type": "TIME"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "RTPlanGeometry",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ToleranceTableNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ToleranceTableLabel",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ToleranceTableSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "FractionGroupNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfFractionsPlanned",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfBeams",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfBrachyApplicationSetups",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "REPEATED",
+                "name": "BeamDoseSpecificationPoint",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BeamDose",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BeamMeterset",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ReferencedBeamNumber",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ReferencedBeamSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "FractionGroupSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Manufacturer",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "InstitutionName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TreatmentMachineName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "PrimaryDosimeterUnit",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "SourceAxisDistance",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "RTBeamLimitingDeviceType",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SourceToBeamLimitingDeviceDistance",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NumberOfLeafJawPairs",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "LeafPositionBoundaries",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "BeamLimitingDeviceSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "BeamNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "BeamName",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "BeamDescription",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "BeamType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "RadiationType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "TreatmentDeliveryType",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfWedges",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfCompensators",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfBoli",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfBlocks",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "BlockTrayID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SourceToBlockTrayDistance",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BlockType",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BlockDivergence",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BlockNumber",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BlockTransmission",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BlockNumberOfPoints",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "BlockData",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "BlockSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ApplicatorID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ApplicatorType",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ApplicatorSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "FinalCumulativeMetersetWeight",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "NumberOfControlPoints",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "ControlPointIndex",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "NominalBeamEnergy",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "DoseRateSet",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "RTBeamLimitingDeviceType",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "REPEATED",
+                    "name": "LeafJawPositions",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "BeamLimitingDevicePositionSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GantryAngle",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "GantryRotationDirection",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BeamLimitingDeviceAngle",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "BeamLimitingDeviceRotationDirection",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "PatientSupportAngle",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "PatientSupportRotationDirection",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "TableTopEccentricAngle",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "TableTopEccentricRotationDirection",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "IsocenterPosition",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SourceToSurfaceDistance",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CumulativeMetersetWeight",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "ControlPointSequence",
+            "type": "RECORD"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedPatientSetupNumber",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedToleranceTableNumber",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "BeamSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "GantryAngle",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "PatientPosition",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "PatientSetupNumber",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PatientSetupSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedRTPlanSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPClassUID",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "ReferencedSOPInstanceUID",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "ReferencedStructureSetSequence",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ApprovalStatus",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InterpretationTypeID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "InterpretationStatusID",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Id",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "Value",
+            "type": "INTEGER"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "CurveDimensions",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Id",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "Value",
+            "type": "INTEGER"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "NumberOfPoints",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Id",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "Value",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "TypeOfData",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Id",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "Value",
+            "type": "INTEGER"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "DataValueRepresentation",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPClassUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPInstanceUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "REPEATED",
+                    "name": "ReferencedFrameNumber",
+                    "type": "STRING"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "PurposeOfReferenceCodeSequence",
+                    "type": "RECORD"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "SourceImageSequence",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "DerivationCodeSequence",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "DerivationImageSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MultiCoilElementName",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "MultiCoilElementUsed",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "MultiCoilDefinitionSequence",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "MRReceiveCoilSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "SlabThickness",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "SlabOrientation",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "MidSlabPosition",
+                "type": "FLOAT"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "MRSpatialSaturationSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "T2Preparation",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SpectrallySelectedExcitation",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ParallelReductionFactorInPlane",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ParallelAcquisition",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "InversionTimes",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "ParallelReductionFactorOutOfPlane",
+                "type": "FLOAT"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "MRModifierSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "DiffusionDirectionality",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "REPEATED",
+                    "name": "DiffusionGradientOrientation",
+                    "type": "FLOAT"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "Tag",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "REPEATED",
+                        "name": "Data",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "OtherElements",
+                    "type": "RECORD"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "DiffusionGradientDirectionSequence",
+                "type": "RECORD"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "DiffusionBValue",
+                "type": "FLOAT"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "DiffusionAnisotropyType",
+                "type": "STRING"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "Tag",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "REPEATED",
+                    "name": "Data",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "OtherElements",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "MRDiffusionSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "REPEATED",
+                "name": "ImageOrientationPatient",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PlaneOrientationSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "SliceThickness",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "SpacingBetweenSlices",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "PixelSpacing",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PixelMeasuresSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "REPEATED",
+                "name": "ReferencedSegmentNumber",
+                "type": "INTEGER"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "SegmentIdentificationSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "SharedFunctionalGroupsSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPClassUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "ReferencedSOPInstanceUID",
+                    "type": "STRING"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeValue",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodingSchemeDesignator",
+                        "type": "STRING"
+                      },
+                      {
+                        "mode": "NULLABLE",
+                        "name": "CodeMeaning",
+                        "type": "STRING"
+                      }
+                    ],
+                    "mode": "REPEATED",
+                    "name": "PurposeOfReferenceCodeSequence",
+                    "type": "RECORD"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "SourceImageSequence",
+                "type": "RECORD"
+              },
+              {
+                "fields": [
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeValue",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodingSchemeDesignator",
+                    "type": "STRING"
+                  },
+                  {
+                    "mode": "NULLABLE",
+                    "name": "CodeMeaning",
+                    "type": "STRING"
+                  }
+                ],
+                "mode": "REPEATED",
+                "name": "DerivationCodeSequence",
+                "type": "RECORD"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "DerivationImageSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "StackID",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "InStackPositionNumber",
+                "type": "INTEGER"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "DimensionIndexValues",
+                "type": "INTEGER"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "FrameContentSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "REPEATED",
+                "name": "ImagePositionPatient",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "PlanePositionSequence",
+            "type": "RECORD"
+          },
+          {
+            "fields": [
+              {
+                "mode": "REPEATED",
+                "name": "ReferencedSegmentNumber",
+                "type": "INTEGER"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "SegmentIdentificationSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "PerFrameFunctionalGroupsSequence",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "Tag_01171010",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "Tag_01171020",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "Tag_01171022",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "Tag_01171024",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "Tag_011710B0",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "Tag",
+                "type": "STRING"
+              },
+              {
+                "mode": "REPEATED",
+                "name": "Data",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "OtherElements",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "Tag_2001105F",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "Tag",
+            "type": "STRING"
+          },
+          {
+            "mode": "REPEATED",
+            "name": "Data",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "OtherElements",
+        "type": "RECORD"
+      }
+    ]
+  },
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/idc-dev-etl/datasets/idc_tcia_views_mvp_wave0/tables/dicom_all",
+  "tableReference": {
+    "datasetId": "idc_tcia_views_mvp_wave0",
+    "projectId": "idc-dev-etl",
+    "tableId": "dicom_all"
+  },
+  "type": "VIEW",
+  "view": {
+    "query": "SELECT\n  aux.IDC_CollectionID AS collection_id,\n  dcm.*\nFROM\n  `idc-dev-etl.idc_tcia_mvp_wave0.idc_tcia_auxilliary_metadata` AS aux\nINNER JOIN\n  `idc-dev-etl.idc_tcia_mvp_wave0.idc_tcia_dicom_metadata` AS dcm\nON\n  aux.SOPInstanceUID = dcm.SOPInstanceUID",
+    "useLegacySql": false
+  }
+}
