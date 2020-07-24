@@ -1,5 +1,5 @@
 SELECT
-  aux.IDC_CollectionID AS collection_id,
+  aux.Webapp_CollectionID AS collection_id,
   dcm.*
 FROM
   `{0}` AS aux
