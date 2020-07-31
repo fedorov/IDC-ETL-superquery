@@ -156,6 +156,12 @@
           {
                     "description": "TBD",
             "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
+            "type": "STRING"
+          },
+          {
+                    "description": "TBD",
+            "mode": "NULLABLE",
             "name": "CodeMeaning",
             "type": "STRING"
           }
@@ -177,6 +183,12 @@
                     "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+                    "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
             "type": "STRING"
           },
           {
