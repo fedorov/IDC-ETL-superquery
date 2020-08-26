@@ -1,13 +1,30 @@
-with pre_dicom_all as (SELECT
-  aux.IDC_Webapp_CollectionID AS collection_id,
-  dcm.*
+WITH
+  pre_pre_dicom_all AS (
+  SELECT
+    aux.IDC_Webapp_CollectionID AS collection_id,
+    dcm.*
+  FROM
+    `{0}` AS aux
+  INNER JOIN
+    `{1}` AS dcm
+  ON
+    aux.SOPInstanceUID = dcm.SOPInstanceUID),
+  pre_dicom_all AS (
+  SELECT
+    data_collections.Location AS tcia_tumorLocation,
+    pre_pre_dicom_all.*
+  FROM
+    pre_pre_dicom_all
+  INNER JOIN
+    `{2}` AS data_collections
+  ON
+    pre_pre_dicom_all.collection_id = data_collections.IDC_Webapp_CollectionID)
+SELECT
+  DOIs.Source_DOI AS Source_DOI,
+  pre_dicom_all.*
 FROM
-  `{0}` AS aux
+  `{3}` AS DOIs
 INNER JOIN
-  `{1}` AS dcm
+  pre_dicom_all
 ON
-  aux.SOPInstanceUID = dcm.SOPInstanceUID)
-select DOIs.Source_DOI as Source_DOI, pre_dicom_all.*
-from `{2}` as DOIs
-inner join pre_dicom_all
-on DOIs.SeriesInstanceUID = pre_dicom_all.SeriesInstanceUID
+  DOIs.SeriesInstanceUID = pre_dicom_all.SeriesInstanceUID

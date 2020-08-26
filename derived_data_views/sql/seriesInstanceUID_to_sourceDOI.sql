@@ -15,7 +15,6 @@ WITH
     coll_meta.DOI
   FROM
     `{2}` coll_meta
-    #INNER join
   INNER JOIN
     Series2CollectionID
   ON
