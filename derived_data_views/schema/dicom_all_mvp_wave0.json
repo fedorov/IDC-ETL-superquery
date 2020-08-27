@@ -16,6 +16,12 @@
       {
         "description": "TBD",
         "mode": "NULLABLE",
+        "name": "tcia_tumorLocation",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
         "name": "collection_id",
         "type": "STRING"
       },
@@ -8067,6 +8073,26 @@
         "description": "TBD",
         "mode": "REPEATED",
         "name": "OtherElements",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "TagName",
+            "type": "STRING"
+          },
+          {
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "TagReference",
+            "type": "STRING"
+          }
+        ],
+        "description": "TBD",
+        "mode": "REPEATED",
+        "name": "DroppedTags",
         "type": "RECORD"
       }
     ]
