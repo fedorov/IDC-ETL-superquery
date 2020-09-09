@@ -28,6 +28,12 @@
       {
         "description": "TBD",
         "mode": "NULLABLE",
+        "name": "gcs_url",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
         "name": "MediaStorageSOPClassUID",
         "type": "STRING"
       },

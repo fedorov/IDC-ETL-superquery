@@ -2,6 +2,7 @@ WITH
   pre_pre_dicom_all AS (
   SELECT
     aux.IDC_Webapp_CollectionID AS collection_id,
+    aux.GCS_URL as gcs_url,
     dcm.*
   FROM
     `{0}` AS aux
