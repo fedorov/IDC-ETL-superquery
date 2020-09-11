@@ -3,6 +3,11 @@ WITH
   SELECT
     aux.IDC_Webapp_CollectionID AS collection_id,
     aux.GCS_URL as gcs_url,
+    aux.GCS_Bucket as gcs_bucket,
+    aux.GCS_Generation as gcs_generation,
+    aux.CRDC_UUIDs.Study as crdc_study_uuid,
+    aux.CRDC_UUIDs.Series as crdc_series_uuid,
+    aux.CRDC_UUIDs.Instance as crdc_instance_uuid,
     dcm.*
   FROM
     `{0}` AS aux

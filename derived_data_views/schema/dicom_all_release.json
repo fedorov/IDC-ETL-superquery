@@ -34,6 +34,36 @@
       {
         "description": "TBD",
         "mode": "NULLABLE",
+        "name": "gcs_bucket",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "gcs_generation",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "crdc_study_uuid",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "crdc_series_uuid",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "crdc_instance_uuid",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
         "name": "MediaStorageSOPClassUID",
         "type": "STRING"
       },
