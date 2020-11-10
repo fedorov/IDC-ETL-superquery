@@ -10,7 +10,55 @@
       {
         "description": "TBD",
         "mode": "NULLABLE",
+        "name": "Source_DOI",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "tcia_tumorLocation",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
         "name": "collection_id",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "gcs_url",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "gcs_bucket",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "gcs_generation",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "crdc_study_uuid",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "crdc_series_uuid",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "crdc_instance_uuid",
         "type": "STRING"
       },
       {
@@ -8062,18 +8110,27 @@
         "mode": "REPEATED",
         "name": "OtherElements",
         "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "TagName",
+            "type": "STRING"
+          },
+          {
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "TagReference",
+            "type": "STRING"
+          }
+        ],
+        "description": "TBD",
+        "mode": "REPEATED",
+        "name": "DroppedTags",
+        "type": "RECORD"
       }
     ]
-  },
-  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/idc-dev-etl/datasets/idc_tcia_views_mvp_wave0/tables/dicom_all",
-  "tableReference": {
-    "datasetId": "idc_tcia_views_mvp_wave0",
-    "projectId": "idc-dev-etl",
-    "tableId": "dicom_all"
-  },
-  "type": "VIEW",
-  "view": {
-    "query": "SELECT\n  aux.IDC_CollectionID AS collection_id,\n  dcm.*\nFROM\n  `idc-dev-etl.idc_tcia_mvp_wave0.idc_tcia_auxilliary_metadata` AS aux\nINNER JOIN\n  `idc-dev-etl.idc_tcia_mvp_wave0.idc_tcia_dicom_metadata` AS dcm\nON\n  aux.SOPInstanceUID = dcm.SOPInstanceUID",
-    "useLegacySql": false
   }
 }
