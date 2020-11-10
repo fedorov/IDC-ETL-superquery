@@ -133,10 +133,19 @@ def make_schema_list(field_list):
     full_list = []
     for sf in field_list:
         if sf["type"] == "RECORD":
+            if sf["name"] == "ContextGroupIdentificationSequence":
+                print("Here")
             field_list = make_schema_list(sf["fields"])
+            if not "description" in sf:
+                sf["description"] = "TBD"
             next_field = bigquery.SchemaField(sf["name"], sf["type"], sf["mode"], sf["description"], field_list)
         else:
-            next_field = bigquery.SchemaField(sf["name"], sf["type"], sf["mode"], sf["description"])
+            try:
+                if not "description" in sf:
+                    sf["description"] = "TBD"
+                next_field = bigquery.SchemaField(sf["name"], sf["type"], sf["mode"], sf["description"])
+            except KeyError as e:
+                print("KeyError: {}".format(e))
         full_list.append(next_field)
     return full_list
 
@@ -247,6 +256,13 @@ def main(args):
         if not success:
             print("create_dataset failed")
             return
+
+    if 'delete_all_views' in steps:
+        if bq_dataset_exists(target_client, dataset_id):
+            success = delete_all_views(target_client, target_project, dataset_id)
+            if not success:
+                print("deleting all views failed")
+                return
 
     if 'install_views' in steps:
         for mydict in install_list:

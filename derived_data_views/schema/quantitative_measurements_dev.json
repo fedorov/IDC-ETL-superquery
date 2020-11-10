@@ -8,37 +8,37 @@
   "schema": {
     "fields": [
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "PatientID",
         "type": "STRING"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "SOPInstanceUID",
         "type": "STRING"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "measurementGroup_number",
         "type": "INTEGER"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "segmentationInstanceUID",
         "type": "STRING"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "REPEATED",
         "name": "segmentationSegmentNumber",
         "type": "INTEGER"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "sourceSegmentedSeriesUID",
         "type": "STRING"
@@ -50,7 +50,7 @@
         "type": "STRING"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "trackingUniqueIdentifier",
         "type": "STRING"
@@ -58,25 +58,25 @@
       {
         "fields": [
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeValue",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodingSchemeDesignator",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeMeaning",
             "type": "STRING"
           }
         ],
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "Quantity",
         "type": "RECORD"
@@ -84,31 +84,31 @@
       {
         "fields": [
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeValue",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodingSchemeDesignator",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeMeaning",
             "type": "STRING"
           }
         ],
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "derivationModifier",
         "type": "RECORD"
       },
       {
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "Value",
         "type": "NUMERIC"
@@ -116,25 +116,31 @@
       {
         "fields": [
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeValue",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodingSchemeDesignator",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
+            "type": "STRING"
+          },
+          {
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeMeaning",
             "type": "STRING"
           }
         ],
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "Units",
         "type": "RECORD"
@@ -142,25 +148,31 @@
       {
         "fields": [
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeValue",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodingSchemeDesignator",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
+            "type": "STRING"
+          },
+          {
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeMeaning",
             "type": "STRING"
           }
         ],
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "finding",
         "type": "RECORD"
@@ -168,25 +180,31 @@
       {
         "fields": [
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeValue",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodingSchemeDesignator",
             "type": "STRING"
           },
           {
-                    "description": "TBD",
+            "description": "TBD",
+            "mode": "NULLABLE",
+            "name": "CodingSchemeVersion",
+            "type": "STRING"
+          },
+          {
+            "description": "TBD",
             "mode": "NULLABLE",
             "name": "CodeMeaning",
             "type": "STRING"
           }
         ],
-                "description": "TBD",
+        "description": "TBD",
         "mode": "NULLABLE",
         "name": "findingSite",
         "type": "RECORD"
