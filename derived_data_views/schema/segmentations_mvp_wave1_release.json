@@ -1,0 +1,157 @@
+{
+  "description": "TBD Description",
+  "friendlyName": "TBD Friendly Name",
+  "labels": {
+    "tbd_key_1": "value_1",
+    "tbd_key_2": "value_2"
+  },
+  "schema": {
+    "fields": [
+      {
+        "mode": "NULLABLE",
+        "name": "PatientID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SOPInstanceUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "FrameOfReferenceUID",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "AnatomicRegion",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "AnatomicRegionModifier",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "SegmentedPropertyCategory",
+        "type": "RECORD"
+      },
+      {
+        "fields": [
+          {
+            "mode": "NULLABLE",
+            "name": "CodeValue",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodingSchemeDesignator",
+            "type": "STRING"
+          },
+          {
+            "mode": "NULLABLE",
+            "name": "CodeMeaning",
+            "type": "STRING"
+          },
+          {
+            "fields": [
+              {
+                "mode": "NULLABLE",
+                "name": "CodeValue",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodingSchemeDesignator",
+                "type": "STRING"
+              },
+              {
+                "mode": "NULLABLE",
+                "name": "CodeMeaning",
+                "type": "STRING"
+              }
+            ],
+            "mode": "REPEATED",
+            "name": "SegmentedPropertyTypeModifierCodeSequence",
+            "type": "RECORD"
+          }
+        ],
+        "mode": "NULLABLE",
+        "name": "SegmentedPropertyType",
+        "type": "RECORD"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SegmentAlgorithmType",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "SegmentNumber",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TrackingUID",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "TrackingID",
+        "type": "STRING"
+      }
+    ]
+  }
+}
