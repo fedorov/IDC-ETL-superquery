@@ -1,0 +1,67 @@
+# Used for publish_bq_views.sh
+# Generate views for the collections in the _dev (complete) set of collections
+version: 1
+files_and_buckets_and_tables:
+
+  # What is the installation project:
+  TARGET_PROJECT: canceridc-data
+
+  # What is the installation dataset:
+  DATASET: idc_views
+
+  # Relative file path to data files, from working directory
+  DATA_FILE_PATH: derived_data_views
+
+  # Where is the dataset description file:
+  DATASET_METADATA_FILE: dataset_metadata/data_views_metadata.json
+
+  # For each view to install, what is the sql, json file with the schema and metadata, and table list for sql
+  INSTALL_LIST:
+    - seriesInstanceUID_to_sourceDOI:
+        sql: sql/seriesInstanceUID_to_sourceDOI.sql
+        metadata: schema/seriesInstanceUID_to_sourceDOI.json
+        table_list:
+          - canceridc-data.idc.dicom_metadata
+          - canceridc-data.idc.auxilliary_metadata
+          - canceridc-data.idc.data_collections_metadata
+          - canceridc-data.idc.third_party_series
+    - dicom_all:
+        sql: sql/dicom_all.sql
+        metadata: schema/dicom_all_mvp_wave1_release.json
+        table_list:
+          - canceridc-data.idc.auxilliary_metadata
+          - canceridc-data.idc.dicom_metadata
+          - canceridc-data.idc.data_collections_metadata
+          - canceridc-data.idc_views.seriesInstanceUID_to_sourceDOI
+    - measurement_groups:
+       sql: sql/measurement_groups.sql
+       metadata: schema/measurement_groups_mvp_wave1_release.json
+       table_list:
+         - canceridc-data.idc.dicom_metadata
+    - qualitative_measurements:
+       sql: sql/qualitative_measurements.sql
+       metadata: schema/qualitative_measurements_mvp_wave1_release.json
+       table_list:
+         - canceridc-data.idc_views.measurement_groups
+    - quantitative_measurements:
+       sql: sql/quantitative_measurements.sql
+       metadata: schema/quantitative_measurements_mvp_wave1_release.json
+       table_list:
+         - canceridc-data.idc_views.measurement_groups
+         - canceridc-data.idc_views.measurement_groups
+         - canceridc-data.idc_views.measurement_groups
+    - segmentations:
+       sql: sql/segmentations.sql
+       metadata: schema/segmentations_mvp_wave1_release.json
+       table_list:
+         - canceridc-data.idc.dicom_metadata # Debug: idc-tcia.lidc_idri_seg_sr.lidc_idri_seg_sr
+
+steps:
+  # delete existing dataset, if present:
+#  - delete_existing_dataset
+  # Create the target dataset:
+#  - create_dataset
+  # Delete all views in existing dataset
+  - delete_all_views
+  # Install the views:
+  - install_views
