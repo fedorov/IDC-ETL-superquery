@@ -1,38 +1,50 @@
-# count all distinct UIDs used for Study/Series/SOPInstanceUID
-# to confirm each one is unique at its own level of hierarchy
 WITH
-  all_uids AS (
+  more_than_once_uids AS (
   WITH
-    distinct_studies AS (
+    all_uids AS (
+    WITH
+      distinct_studies AS (
+      SELECT
+        DISTINCT(StudyInstanceUID) AS UID
+      FROM
+        `idc-dev-etl.idc_tcia_views_dev.dicom_all`),
+      distinct_series AS (
+      SELECT
+        DISTINCT(SeriesInstanceUID) AS UID
+      FROM
+        `idc-dev-etl.idc_tcia_views_dev.dicom_all`),
+      distinct_instances AS (
+      SELECT
+        DISTINCT(SOPInstanceUID) AS UID
+      FROM
+        `idc-dev-etl.idc_tcia_views_dev.dicom_all`)
     SELECT
-      DISTINCT(StudyInstanceUID) AS UID
+      UID
     FROM
-      `idc-dev-etl.idc_tcia_views_dev.dicom_all`),
-    distinct_series AS (
+      distinct_studies
+    UNION ALL
     SELECT
-      DISTINCT(SeriesInstanceUID) AS UID
+      UID
     FROM
-      `idc-dev-etl.idc_tcia_views_dev.dicom_all`),
-    distinct_instances AS (
+      distinct_series
+    UNION ALL
     SELECT
-      DISTINCT(SOPInstanceUID) AS UID
+      UID
     FROM
-      `idc-dev-etl.idc_tcia_views_dev.dicom_all`)
+      distinct_instances)
   SELECT
-    UID
+    COUNT(UID) AS uid_counts,
+    uid
   FROM
-    distinct_studies
-  UNION ALL
-  SELECT
-    UID
-  FROM
-    distinct_series)
+    all_uids
+  GROUP BY
+    uid
+  ORDER BY
+    uid_counts DESC )
 SELECT
-  COUNT(UID) AS uid_counts,
+  uid_counts,
   uid
 FROM
-  all_uids
-GROUP BY
-  uid
-ORDER BY
-  uid_counts DESC
+  more_than_once_uids
+WHERE
+  uid_counts > 1
