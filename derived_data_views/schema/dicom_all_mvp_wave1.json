@@ -18,6 +18,18 @@
         "type": "STRING"
       },
       {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "tcia_species",
+        "type": "STRING"
+      },
+      {
+        "description": "TBD",
+        "mode": "NULLABLE",
+        "name": "tcia_cancerType",
+        "type": "STRING"
+      },
+      {
         "mode": "NULLABLE",
         "name": "collection_id",
         "type": "STRING"
