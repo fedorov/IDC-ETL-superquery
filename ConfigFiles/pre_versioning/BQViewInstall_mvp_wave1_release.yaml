@@ -10,7 +10,7 @@ files_and_buckets_and_tables:
   DATASET: idc_views
 
   # Relative file path to data files, from working directory
-  DATA_FILE_PATH: derived_data_views
+  DATA_FILE_PATH: derived_data_pre_versioning
 
   # Where is the dataset description file:
   DATASET_METADATA_FILE: dataset_metadata/data_views_metadata.json
