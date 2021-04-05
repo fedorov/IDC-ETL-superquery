@@ -8,6 +8,7 @@ WITH
     aux.series_uuid as crdc_series_uuid,
     aux.instance_uuid as crdc_instance_uuid,
     aux.idc_case_id as idc_case_id,
+    aux.instance_size as instance_size,
     aux.version_hash as version_hash,
     aux.collection_hash as collection_hash,
     aux.patient_hash as patient_hash,
