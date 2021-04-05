@@ -187,7 +187,8 @@ def create_view(target_client, target_project, target_dataset, table_name, view_
     #
 
     installed_targ_view.schema = targ_schema
-    target_client.update_table(installed_targ_view, ["schema"])
+
+    # target_client.update_table(installed_targ_view, ["schema"])
 
     return True
 
