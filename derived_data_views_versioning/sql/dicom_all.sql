@@ -7,6 +7,13 @@ WITH
     aux.study_uuid as crdc_study_uuid,
     aux.series_uuid as crdc_series_uuid,
     aux.instance_uuid as crdc_instance_uuid,
+    aux.idc_case_id as idc_case_id,
+    aux.version_hash as version_hash,
+    aux.collection_hash as collection_hash,
+    aux.patient_hash as patient_hash,
+    aux.study_hash as study_hash,
+    aux.series_hash as series_hash,
+    aux.instance_hash as instance_hash,
     aux.source_doi as Source_DOI,
     dcm.*
   FROM
