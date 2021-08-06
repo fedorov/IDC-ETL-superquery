@@ -32,7 +32,7 @@
         "type": "STRING"
       },
       {
-        "description": "The ID of the collection containing this instance as expected by the IDC web app and API",
+        "description": "The ID of the collection containing this instance as expected by the IDC web app and API. This corresponds to the idc_web_collection_id column in the auxiliary_metadata table",
         "mode": "NULLABLE",
         "name": "collection_id",
         "type": "STRING"
@@ -88,7 +88,7 @@
       {
         "description": "IDC assigned UUID of this version of study containing this instance",
         "mode": "NULLABLE",
-        "name": "crdc_study_uuid",
+        "name": "study_uuid",
         "type": "STRING"
       },
       {
@@ -112,7 +112,7 @@
       {
         "description": "IDC assigned UUID of this version of series containing this instance",
         "mode": "NULLABLE",
-        "name": "crdc_series_uuid",
+        "name": "series_uuid",
         "type": "STRING"
       },
       {
@@ -136,7 +136,7 @@
       {
         "description": "IDC assigned UUID of this version of this instance",
         "mode": "NULLABLE",
-        "name": "crdc_instance_uuid",
+        "name": "instance_uuid",
         "type": "STRING"
       },
       {
