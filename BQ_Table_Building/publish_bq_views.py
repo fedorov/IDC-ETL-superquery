@@ -133,8 +133,8 @@ def make_schema_list(field_list):
     full_list = []
     for sf in field_list:
         if sf["type"] == "RECORD":
-            if sf["name"] == "ContextGroupIdentificationSequence":
-                print("Here")
+            # if sf["name"] == "ContextGroupIdentificationSequence":
+            #     print("Here")
             field_list = make_schema_list(sf["fields"])
             if not "description" in sf:
                 sf["description"] = "TBD"
@@ -148,6 +148,39 @@ def make_schema_list(field_list):
                 print("KeyError: {}".format(e))
         full_list.append(next_field)
     return full_list
+
+
+'''
+----------------------------------------------------------------------------------------------
+Annotate the schema that was generated when a view was created with annotations from a 
+supplied (probably partial) schema.
+'''
+
+def annotate_schema(generated_schema, annotation_schema):
+    a=1
+    for src_field in annotation_schema:
+        # Only annotate in the case that the source description is not empty
+        if src_field.description and src_field.description != "TBD":
+            # Search for a field with matching name
+            gen_field = next((trg_field for trg_field in generated_schema if src_field.name == trg_field.name ), None)
+            if gen_field:
+                new_gen_field = bigquery.SchemaField(
+                        gen_field.name,
+                        gen_field.field_type,
+                        description = src_field.description,
+                        fields = gen_field.fields if src_field.field_type != "RECORD" else \
+                            annotate_schema(list(gen_field.fields), list(src_field.fields)),
+                        mode = gen_field.mode,
+                        policy_tags = gen_field.policy_tags
+                    )
+                # if src_field.field_type == "RECORD":
+                #     annotate_schema(list(new_gen_field.fields), list(src_field.fields))
+                generated_schema[generated_schema.index(gen_field)] = new_gen_field
+            else:
+                print("Failed to find target analog of source field {}".format(src_field.name))
+    return generated_schema
+
+
 
 '''
 ----------------------------------------------------------------------------------------------
@@ -178,17 +211,26 @@ def create_view(target_client, target_project, target_dataset, table_name, view_
     #
     # The way a table turns into a view is by setting the view_query property:
     #
-
     targ_view.view_query = view_sql
+    # Create the view
     installed_targ_view = target_client.create_table(targ_view)
+    #
+    # # Get view metadata including the schema
+    # installed_targ_view = target_client.get_table(targ_view)
+
+    # Convert the schema that was generated when we created the view into a tree of SchemaField objects
+    generated_schema = installed_targ_view.schema
+
+    # Add annotations to the generated view
+    annotated_schema = annotate_schema(generated_schema, targ_schema)
 
     #
     # If we created a view, update the schema after creation:
     #
 
-    installed_targ_view.schema = targ_schema
+    installed_targ_view.schema = annotated_schema
 
-    # target_client.update_table(installed_targ_view, ["schema"])
+    target_client.update_table(installed_targ_view, ["schema"])
 
     return True
 
