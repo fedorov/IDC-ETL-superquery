@@ -212,11 +212,9 @@ def create_view(target_client, target_project, target_dataset, table_name, view_
     # The way a table turns into a view is by setting the view_query property:
     #
     targ_view.view_query = view_sql
+
     # Create the view
     installed_targ_view = target_client.create_table(targ_view)
-    #
-    # # Get view metadata including the schema
-    # installed_targ_view = target_client.get_table(targ_view)
 
     # Convert the schema that was generated when we created the view into a tree of SchemaField objects
     generated_schema = installed_targ_view.schema
